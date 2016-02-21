@@ -110,10 +110,55 @@ namespace WindowsFormsApplication1
             
             for (int i = 0; i < 13; i++)
             {
-                int suit = cards[i].suit;
-                int number = cards[i].number;
+                int privateSuit = cards[i].suit;
+                int privateNumber = cards[i].number;
+                String number = "";
 
-                
+                switch (privateNumber)
+                {
+                    case 14:
+                        number = "A";         
+                        break;
+
+                    case 11:
+                        number = "J";
+                        break;
+
+                    case 12:
+                        number = "Q";
+                        break;
+
+                    case 13:
+                        number = "K";
+                        break;
+
+                    case 10:
+                        number = "T";
+                        break;
+
+                    default:
+                        number = Convert.ToString(privateNumber);
+                        break;
+                } 
+
+                switch (privateSuit)
+                {
+                    case 0:
+                        spades += number + " ";
+                        break;
+
+                    case 1:
+                        clubs += number + " ";
+                        break;
+
+                    case 2:
+                        diamonds += number + " ";
+                        break;
+
+                    case 3:
+                        hearts += number + " ";
+                        break;
+                }                
             }
 
             myHand = spades + "\n" + hearts + "\n" + diamonds + "\n" + clubs + "\n";
