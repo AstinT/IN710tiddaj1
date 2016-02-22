@@ -107,6 +107,8 @@ namespace WindowsFormsApplication1
             String diamonds = "D:\t";
             String clubs = "C:\t";
             String myHand = "";
+
+            sortHand();
             
             for (int i = 0; i < 13; i++)
             {
