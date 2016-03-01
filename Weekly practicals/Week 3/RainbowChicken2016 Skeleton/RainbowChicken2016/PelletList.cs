@@ -92,7 +92,13 @@ namespace RainbowChicken2016
         //==============================================================================
         public void Draw()
         {
-            throw new NotImplementedException();
+            Pellet nodeWalker = headPointer;
+
+            while (nodeWalker != null)
+            {
+                nodeWalker.Draw();
+                nodeWalker = nodeWalker.Next;
+            }
         }
     }
 }
