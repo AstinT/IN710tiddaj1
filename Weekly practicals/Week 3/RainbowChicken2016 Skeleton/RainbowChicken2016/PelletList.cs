@@ -96,7 +96,43 @@ namespace RainbowChicken2016
         //==============================================================================
         public void DeleteOne(Pellet pelletToDelete)
         {
-            throw new NotImplementedException();
+            // If you are deleting the first node
+            if (pelletToDelete == headPointer)
+            {
+                // If it is the only node in the list
+                // Head and tails both become null
+                if ((pelletToDelete == headPointer) && (pelletToDelete == tailPointer))
+                {
+                    headPointer = null;
+                    tailPointer = null;
+
+                }
+                // Move head along to the second node
+                else
+                {
+                    headPointer = pelletToDelete.Next;
+                }
+            }
+            // Find previous and swoop
+            else
+            {
+                Pellet nodeWalker = headPointer;
+
+                while (nodeWalker.Next != pelletToDelete)
+                    nodeWalker = nodeWalker.Next;
+
+                if (nodeWalker.Next == pelletToDelete)
+                {
+                    nodeWalker.Next = pelletToDelete.Next;
+                }                
+
+                // If you have just deleted the last node in the list
+                // Set tail to the previous node, because it is now at the end
+                if (tailPointer == pelletToDelete)
+                {
+                    tailPointer = nodeWalker;
+                }
+            }
         }
 
         //==============================================================================
