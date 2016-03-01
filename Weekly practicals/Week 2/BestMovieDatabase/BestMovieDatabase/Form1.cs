@@ -83,7 +83,7 @@ namespace BestMovieDatabase
             tbSearchYear.Text = "";
         }
 
-        public void printAll()
+        /*public void printAll()
         {
             rtDisplay.Text = "";
             String allMovies = dbManager.printAll();
@@ -92,6 +92,15 @@ namespace BestMovieDatabase
                 rtDisplay.Text = allMovies;
             else
                 MessageBox.Show("No movies found in database");
+        }*/
+
+        public void printAll()
+        {
+            foreach (KeyValuePair<int, Movie> currentMovie in dbManager.movieTable)
+            {
+                listBox1.Items.Add("-------------------------------------");
+                listBox1.Items.Add(currentMovie.Value.ToString());
+            }
         }
         
         //Button methods

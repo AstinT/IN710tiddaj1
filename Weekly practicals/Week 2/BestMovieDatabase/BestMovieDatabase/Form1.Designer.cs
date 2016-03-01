@@ -43,6 +43,7 @@
             this.tbDeleteMovieYear = new System.Windows.Forms.TextBox();
             this.tbSearchYear = new System.Windows.Forms.TextBox();
             this.rtDisplay = new System.Windows.Forms.RichTextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // btnAddMovie
@@ -174,11 +175,20 @@
             this.rtDisplay.TabIndex = 15;
             this.rtDisplay.Text = "";
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(810, 465);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(619, 147);
+            this.listBox1.TabIndex = 16;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(795, 630);
+            this.ClientSize = new System.Drawing.Size(1441, 630);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.rtDisplay);
             this.Controls.Add(this.tbSearchYear);
             this.Controls.Add(this.tbDeleteMovieYear);
@@ -218,6 +228,7 @@
         private System.Windows.Forms.TextBox tbDeleteMovieYear;
         private System.Windows.Forms.TextBox tbSearchYear;
         private System.Windows.Forms.RichTextBox rtDisplay;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
