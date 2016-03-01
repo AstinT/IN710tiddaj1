@@ -34,7 +34,16 @@ namespace RainbowChicken2016
         //==============================================================================
         public int Count()
         {
-            throw new NotImplementedException();
+            int count = 0;
+            Pellet nodeWalker = headPointer;
+
+            while (nodeWalker != null)
+            {
+                count++;
+                nodeWalker = nodeWalker.Next;
+            }
+
+            return count;
         }
 
         //==============================================================================
