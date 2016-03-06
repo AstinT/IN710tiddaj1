@@ -37,7 +37,34 @@ namespace StackUnitTest
 
         public String Pop()
         {
+            String lastString;
 
+            //Grabs the most recently added string
+            lastString = Peek();
+
+            //Delete
+            if (headPointer == tailPointer)
+            {
+                headPointer = null;
+                tailPointer = null;
+            }
+            else
+            {
+                StringNode nodeWalker = headPointer;
+
+                while (nodeWalker.Next != tailPointer)
+                    nodeWalker = nodeWalker.Next;
+
+                if (nodeWalker.Next == tailPointer)
+                {
+                    nodeWalker.Next = null;
+                }
+             
+                // Set tail to the last node, because it is now at the end      
+                tailPointer = nodeWalker;
+                
+            }
+            return lastString;
         }
 
         public String Peek()
