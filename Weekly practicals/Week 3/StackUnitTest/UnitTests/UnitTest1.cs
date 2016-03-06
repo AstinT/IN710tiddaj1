@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StackUnitTest;
+
 
 namespace UnitTests
 {
@@ -9,6 +11,7 @@ namespace UnitTests
         [TestMethod]
         public void TestMethod1()
         {
+            Stack test = new Stack();
         }
     }
 }
