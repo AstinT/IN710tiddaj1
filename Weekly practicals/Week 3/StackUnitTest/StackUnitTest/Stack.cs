@@ -42,7 +42,16 @@ namespace StackUnitTest
 
         public String Peek()
         {
+            String lastString;
 
+            if (Count() == 0)
+            {
+
+            }
+
+            StringNode lastNode = tailPointer;
+            lastString = lastNode.Data;
+            return lastString;
         }
 
         public int Count()
