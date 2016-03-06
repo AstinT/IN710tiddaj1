@@ -34,12 +34,20 @@ namespace StackUnitTest
 
         public int Count()
         {
-            
+            int count = 0;
+            StringNode nodeWalker = headPointer;
+
+            while (nodeWalker != null)
+            {
+                count++;
+                nodeWalker = nodeWalker.Next;
+            }
+            return count;
         }
 
         public bool isEmpty()
         {
-                 
+
         }
     }
 }
