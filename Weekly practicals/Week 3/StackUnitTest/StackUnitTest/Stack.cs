@@ -17,14 +17,25 @@ namespace StackUnitTest
             tailPointer = null;
         }
 
-        public void Push()
+        public void Push(StringNode newString)
         {
-            
+            // adding to an empty list
+            if (headPointer == null)
+            {
+                headPointer = newString;
+                tailPointer = newString;
+            }
+            else
+            {
+                // adding at the end
+                tailPointer.Next = newString;
+                tailPointer = newString;
+            }
         }
 
         public String Pop()
         {
-            
+
         }
 
         public String Peek()
