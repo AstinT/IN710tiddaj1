@@ -46,7 +46,7 @@ namespace StackUnitTest
 
             if (Count() == 0)
             {
-
+                throw new Exception("Cannot peek at an empty stack");
             }
 
             StringNode lastNode = tailPointer;
