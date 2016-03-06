@@ -47,7 +47,10 @@ namespace StackUnitTest
 
         public bool isEmpty()
         {
-
+            if (Count() == 0)
+                return true;
+            else
+                return false;
         }
     }
 }
