@@ -8,9 +8,13 @@ namespace StackUnitTest
 {
     public class Stack
     {
+        StringNode headPointer;
+        StringNode tailPointer;
+
         public Stack()
         {
-           
+            headPointer = null;
+            tailPointer = null;
         }
 
         public void Push()
