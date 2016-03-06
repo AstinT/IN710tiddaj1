@@ -8,9 +8,10 @@ namespace StackUnitTest
 {
     public class StringNode
     {
-        public String Data;
-        public StringNode Next { get; set; }
+        public String Data;                     // Holds a string
+        public StringNode Next { get; set; }    // Essential for being a node list
 
+        // Constructor
         public StringNode(String data)
         {
             Data = data;
