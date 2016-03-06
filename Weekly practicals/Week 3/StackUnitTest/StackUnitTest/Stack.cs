@@ -17,19 +17,21 @@ namespace StackUnitTest
             tailPointer = null;
         }
 
-        public void Push(StringNode newString)
+        public void Push(String newString)
         {
+            StringNode newNode = new StringNode(newString);
+
             // adding to an empty list
             if (headPointer == null)
             {
-                headPointer = newString;
-                tailPointer = newString;
+                headPointer = newNode;
+                tailPointer = newNode;
             }
             else
             {
                 // adding at the end
-                tailPointer.Next = newString;
-                tailPointer = newString;
+                tailPointer.Next = newNode;
+                tailPointer = newNode;
             }
         }
 
@@ -56,7 +58,7 @@ namespace StackUnitTest
             return count;
         }
 
-        public bool isEmpty()
+        public bool IsEmpty()
         {
             if (Count() == 0)
                 return true;
