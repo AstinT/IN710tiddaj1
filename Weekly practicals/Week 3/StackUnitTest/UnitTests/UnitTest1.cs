@@ -37,11 +37,20 @@ namespace UnitTests
 
          // Test 3
         [TestMethod]
-        [ExpectedException(typeof(Exception)]
+        [ExpectedException(typeof(Exception))]
         public void Pop_NewStack_ThrowException()
         {
             Stack stack = new Stack();
-            stack.Pop();   
+            stack.Pop();
+        }
+
+        // Test 4
+        [TestMethod]
+        [ExpectedException(typeof(Exception))]
+        public void Peek_NewStack_ThrowException()
+        {
+            Stack stack = new Stack();
+            stack.Peek();
         }
     }
 }
