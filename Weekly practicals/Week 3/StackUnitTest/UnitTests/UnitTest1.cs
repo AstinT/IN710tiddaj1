@@ -116,5 +116,19 @@ namespace UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        // Test 10
+        [TestMethod]
+        public void Push_OneElementInStack_ReturnMostRecentlyAddedString()
+        {
+            Stack stack = new Stack();
+            stack.Push("Dog");
+            stack.Push("Cat");
+
+            String expected = "Cat";
+            String actual = stack.Peek();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
