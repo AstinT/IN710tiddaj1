@@ -77,5 +77,18 @@ namespace UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        // Test 7
+        [TestMethod]
+        public void Pop_OneElementInStack_ReturnsString()
+        {
+            Stack stack = new Stack();
+            stack.Push("Dog");
+
+            String expected = "Dog";
+            String actual = stack.Pop();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
