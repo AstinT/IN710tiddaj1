@@ -130,5 +130,26 @@ namespace UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        // Test 11
+        [TestMethod]
+        public void IsEmpty_FourElementsInStackPopped_ReturnsTrue()
+        {
+            Stack stack = new Stack();
+            stack.Push("Dog");
+            stack.Push("Cat");
+            stack.Push("Fish");
+            stack.Push("Bird");
+
+            String deletedOne = stack.Pop();
+            String deletedTwo = stack.Pop();
+            String deletedThree = stack.Pop();
+            String deletedFour = stack.Pop();
+
+            bool expected = true;
+            bool actual = stack.IsEmpty();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
