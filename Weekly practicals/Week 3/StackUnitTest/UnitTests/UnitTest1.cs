@@ -151,5 +151,24 @@ namespace UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        // Test 12
+        [TestMethod]
+        public void Count_FourElementsInStackTwoPopped_ReturnsTwo()
+        {
+            Stack stack = new Stack();
+            stack.Push("Dog");
+            stack.Push("Cat");
+            stack.Push("Fish");
+            stack.Push("Bird");
+
+            String deletedOne = stack.Pop();
+            String deletedTwo = stack.Pop();
+
+            int expected = 2;
+            int actual = stack.Count();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
