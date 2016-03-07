@@ -103,5 +103,18 @@ namespace UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        // Test 9
+        [TestMethod]
+        public void Count_OneElementInStack_ReturnsOne()
+        {
+            Stack stack = new Stack();
+            stack.Push("Dog");
+
+            int expected = 1;
+            int actual = stack.Count();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
