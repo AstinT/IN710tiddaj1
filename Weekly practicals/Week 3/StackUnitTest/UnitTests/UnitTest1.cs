@@ -34,5 +34,14 @@ namespace UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+         // Test 3
+        [TestMethod]
+        [ExpectedException(typeof(Exception)]
+        public void Pop_NewStack_ThrowException()
+        {
+            Stack stack = new Stack();
+            stack.Pop();   
+        }
     }
 }
