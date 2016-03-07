@@ -64,5 +64,18 @@ namespace UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        // Test 6
+        [TestMethod]
+        public void IsEmpty_OneElementInStack_ReturnsFalse()
+        {
+            Stack stack = new Stack();
+            stack.Push("Dog");
+
+            bool expected = false;
+            bool actual = stack.IsEmpty();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
