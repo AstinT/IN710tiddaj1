@@ -22,7 +22,7 @@ namespace UnitTests
    
         // Test 2
         [TestMethod]
-        public void Push_NewStack_ReturnsAddedString()
+        public void Push_NewStackAddOneItem_ReturnsAddedString()
         {
             Stack stack = new Stack();
             
