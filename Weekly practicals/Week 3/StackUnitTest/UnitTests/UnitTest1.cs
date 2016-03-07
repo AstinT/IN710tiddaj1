@@ -52,5 +52,17 @@ namespace UnitTests
             Stack stack = new Stack();
             stack.Peek();
         }
+
+        // Test 5
+        [TestMethod]
+        public void Count_NewStack_ReturnsZero()
+        {
+            Stack stack = new Stack();
+
+            int expected = 0;
+            int actual = stack.Count();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
