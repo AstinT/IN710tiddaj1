@@ -18,6 +18,21 @@ namespace UnitTests
             bool actual = stack.IsEmpty();
 
             Assert.AreEqual(expected, actual);
-        }       
+        }
+   
+        // Test 2
+        [TestMethod]
+        public void Push_NewStack_ReturnsAddedString()
+        {
+            Stack stack = new Stack();
+            
+            //Adding string
+            stack.Push("Dog");
+
+            String expected = "Dog";
+            String actual = stack.Peek();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
