@@ -90,5 +90,18 @@ namespace UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        // Test 8
+        [TestMethod]
+        public void Peek_OneElementInStack_ReturnsString()
+        {
+            Stack stack = new Stack();
+            stack.Push("Dog");
+
+            String expected = "Dog";
+            String actual = stack.Peek();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
