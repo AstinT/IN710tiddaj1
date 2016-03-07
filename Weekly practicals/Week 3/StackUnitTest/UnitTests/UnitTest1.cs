@@ -170,5 +170,22 @@ namespace UnitTests
 
             Assert.AreEqual(expected, actual);
         }
+
+        // Test 13
+        [TestMethod]
+        public void IsEmpty_OneElementInStackPoppedThenAdded_ReturnsFalse()
+        {
+            Stack stack = new Stack();
+            stack.Push("Dog");
+            
+            String deletedOne = stack.Pop();
+
+            stack.Push("Cat");
+
+            bool expected = false;
+            bool actual = stack.IsEmpty();
+
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
