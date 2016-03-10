@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Game_Character
 {
-    class Character
+    public abstract class Character
     {
+        protected String Name;
+        protected IBattleMachine Weapon;
+
+        public virtual String StateName()
+        {
+            return "My name is " + Name;
+        }
+
+        public abstract String Declaim();
     }
 }
