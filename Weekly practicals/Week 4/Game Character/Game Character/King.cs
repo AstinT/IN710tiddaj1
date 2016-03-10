@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Game_Character
 {
-    class King
+    public class King : Character
     {
+        public King(String name) : base(name)
+        {
+            Weapon = new Sword();
+        }
+
+        public override string Declaim()
+        {
+            return "I am a King!";
+        }
     }
 }
