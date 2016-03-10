@@ -70,5 +70,35 @@ namespace Game_Character
             else
                 MessageBox.Show("Please enter a name");            
         }
+
+        private void btnBattle_Click(object sender, EventArgs e)
+        {
+            List<int> battlersList = new List<int>();
+
+            foreach (int checkedIndex in checkedListBox1.CheckedIndices)
+            {
+                battlersList.Add(checkedIndex);
+            }
+
+            if (battlersList.Count == 2)
+            {
+                listBox1.Items.Clear();
+
+                foreach (int battler in battlersList)
+                {
+                    BattleString(battler);
+                }
+            }
+            else
+                MessageBox.Show("Please select 2 characters");
+        }
+
+        private void BattleString(int battler)
+        {
+            listBox1.Items.Add(characterList[battler].StateName());
+            listBox1.Items.Add(characterList[battler].Declaim());
+            listBox1.Items.Add(characterList[battler].UseWeapon());
+            listBox1.Items.Add("");
+        }
     }
 }
