@@ -100,5 +100,38 @@ namespace Game_Character
             listBox1.Items.Add(characterList[battler].UseWeapon());
             listBox1.Items.Add("");
         }
+
+        private void btnChangeWeapon_Click(object sender, EventArgs e)
+        {
+            List<int> changeWeaponCharcterList = new List<int>();
+
+            foreach (int checkedIndex in checkedListBox2.CheckedIndices)
+            {
+                changeWeaponCharcterList.Add(checkedIndex);
+            }
+
+            if (changeWeaponCharcterList.Count == 1)
+            {
+                foreach(int character in changeWeaponCharcterList)
+                {
+                    ChangeWeapon(character);
+                }
+                
+            }
+            else
+                MessageBox.Show("Please select 1 character");
+        }
+
+        private void ChangeWeapon(int characterIndex)
+        {
+            if (rdSword.Checked)
+                characterList[characterIndex].Weapon = new Sword();
+            else if (rdKnife.Checked)
+                characterList[characterIndex].Weapon = new Knife();
+            else if (rdBow.Checked)
+                characterList[characterIndex].Weapon = new Bow();
+            else
+                MessageBox.Show("Please select a weapon to change too.");
+        }
     }
 }
