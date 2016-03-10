@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Game_Character
 {
-    interface IBattleMachine
+    public interface IBattleMachine
     {
+        String UseWeapon();
     }
 }
