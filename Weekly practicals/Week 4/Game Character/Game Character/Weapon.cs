@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Game_Character
 {
-    class Weapon
+    public class Weapon : IBattleMachine
     {
+        protected String action;
+        protected String weaponName;
+
+        public String UseWeapon()
+        {
+            return "I " + action + " with my " + weaponName + "!";
+        }
     }
 }
