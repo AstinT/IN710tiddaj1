@@ -44,9 +44,9 @@ namespace Game_Character
         private void btnAddCharacter_Click(object sender, EventArgs e)
         {
             Character newCharacter = null;
-            String name = txtName.Text;
+            String name = txtName.Text;            
 
-            if (txtName.Text != name)
+            if (name != "")
             {
                 if (rdKing.Checked)
                     newCharacter = new King(name);
