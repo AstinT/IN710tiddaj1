@@ -11,9 +11,19 @@ namespace Game_Character
         protected String Name;
         protected IBattleMachine Weapon;
 
+        public Character(String name)
+        {
+            Name = name;
+        }
+
         public virtual String StateName()
         {
             return "My name is " + Name;
+        }
+
+        public virtual String UseWeapon()
+        {
+            return Weapon.UseWeapon();
         }
 
         public abstract String Declaim();
