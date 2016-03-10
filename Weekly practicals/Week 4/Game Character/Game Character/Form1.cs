@@ -41,13 +41,18 @@ namespace Game_Character
             }
         }
 
+        //Add character
         private void btnAddCharacter_Click(object sender, EventArgs e)
         {
+
             Character newCharacter = null;
+            //getting name for txtName
             String name = txtName.Text;            
 
+            //if txtName has some txt in it add
             if (name != "")
             {
+                //Checking to see what kind of character type is selected
                 if (rdKing.Checked)
                     newCharacter = new King(name);
                 else if (rdQueen.Checked)
@@ -75,11 +80,13 @@ namespace Game_Character
         {
             List<int> battlersList = new List<int>();
 
+            //get all characters that are selected to battle
             foreach (int checkedIndex in checkedListBox1.CheckedIndices)
             {
                 battlersList.Add(checkedIndex);
             }
 
+            //Checks to see how many have been selected
             if (battlersList.Count == 2)
             {
                 listBox1.Items.Clear();
@@ -89,10 +96,12 @@ namespace Game_Character
                     BattleString(battler);
                 }
             }
+            //if more than two selected display this
             else
                 MessageBox.Show("Please select 2 characters");
         }
 
+        //Displays full character message
         private void BattleString(int battler)
         {
             listBox1.Items.Add(characterList[battler].StateName());
@@ -101,6 +110,7 @@ namespace Game_Character
             listBox1.Items.Add("");
         }
 
+        //change weapon
         private void btnChangeWeapon_Click(object sender, EventArgs e)
         {
             List<int> changeWeaponCharcterList = new List<int>();
