@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.gbAlgorithms = new System.Windows.Forms.GroupBox();
-            this.rbRot13 = new System.Windows.Forms.RadioButton();
             this.rbStringReverse = new System.Windows.Forms.RadioButton();
+            this.rbRot13 = new System.Windows.Forms.RadioButton();
             this.btnEncrypt = new System.Windows.Forms.Button();
             this.btnDecrypt = new System.Windows.Forms.Button();
             this.lbInput = new System.Windows.Forms.Label();
@@ -51,17 +51,6 @@
             this.gbAlgorithms.TabStop = false;
             this.gbAlgorithms.Text = "Encryption Algorithm";
             // 
-            // rbRot13
-            // 
-            this.rbRot13.AutoSize = true;
-            this.rbRot13.Location = new System.Drawing.Point(6, 30);
-            this.rbRot13.Name = "rbRot13";
-            this.rbRot13.Size = new System.Drawing.Size(60, 17);
-            this.rbRot13.TabIndex = 0;
-            this.rbRot13.TabStop = true;
-            this.rbRot13.Text = "ROT13";
-            this.rbRot13.UseVisualStyleBackColor = true;
-            // 
             // rbStringReverse
             // 
             this.rbStringReverse.AutoSize = true;
@@ -73,18 +62,30 @@
             this.rbStringReverse.Text = "String reverse";
             this.rbStringReverse.UseVisualStyleBackColor = true;
             // 
+            // rbRot13
+            // 
+            this.rbRot13.AutoSize = true;
+            this.rbRot13.Location = new System.Drawing.Point(6, 30);
+            this.rbRot13.Name = "rbRot13";
+            this.rbRot13.Size = new System.Drawing.Size(60, 17);
+            this.rbRot13.TabIndex = 0;
+            this.rbRot13.TabStop = true;
+            this.rbRot13.Text = "ROT13";
+            this.rbRot13.UseVisualStyleBackColor = true;
+            // 
             // btnEncrypt
             // 
-            this.btnEncrypt.Location = new System.Drawing.Point(281, 33);
+            this.btnEncrypt.Location = new System.Drawing.Point(279, 72);
             this.btnEncrypt.Name = "btnEncrypt";
             this.btnEncrypt.Size = new System.Drawing.Size(75, 23);
             this.btnEncrypt.TabIndex = 1;
             this.btnEncrypt.Text = "Encrypt";
             this.btnEncrypt.UseVisualStyleBackColor = true;
+            this.btnEncrypt.Click += new System.EventHandler(this.btnEncrypt_Click);
             // 
             // btnDecrypt
             // 
-            this.btnDecrypt.Location = new System.Drawing.Point(402, 33);
+            this.btnDecrypt.Location = new System.Drawing.Point(400, 72);
             this.btnDecrypt.Name = "btnDecrypt";
             this.btnDecrypt.Size = new System.Drawing.Size(75, 23);
             this.btnDecrypt.TabIndex = 2;
@@ -94,7 +95,7 @@
             // lbInput
             // 
             this.lbInput.AutoSize = true;
-            this.lbInput.Location = new System.Drawing.Point(54, 206);
+            this.lbInput.Location = new System.Drawing.Point(51, 177);
             this.lbInput.Name = "lbInput";
             this.lbInput.Size = new System.Drawing.Size(31, 13);
             this.lbInput.TabIndex = 3;
@@ -103,7 +104,7 @@
             // lbOutput
             // 
             this.lbOutput.AutoSize = true;
-            this.lbOutput.Location = new System.Drawing.Point(54, 275);
+            this.lbOutput.Location = new System.Drawing.Point(51, 246);
             this.lbOutput.Name = "lbOutput";
             this.lbOutput.Size = new System.Drawing.Size(39, 13);
             this.lbOutput.TabIndex = 4;
@@ -111,14 +112,14 @@
             // 
             // tbInput
             // 
-            this.tbInput.Location = new System.Drawing.Point(123, 203);
+            this.tbInput.Location = new System.Drawing.Point(120, 174);
             this.tbInput.Name = "tbInput";
             this.tbInput.Size = new System.Drawing.Size(354, 20);
             this.tbInput.TabIndex = 5;
             // 
             // tbOutput
             // 
-            this.tbOutput.Location = new System.Drawing.Point(123, 267);
+            this.tbOutput.Location = new System.Drawing.Point(120, 238);
             this.tbOutput.Name = "tbOutput";
             this.tbOutput.ReadOnly = true;
             this.tbOutput.Size = new System.Drawing.Size(354, 20);
@@ -128,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 331);
+            this.ClientSize = new System.Drawing.Size(524, 282);
             this.Controls.Add(this.tbOutput);
             this.Controls.Add(this.tbInput);
             this.Controls.Add(this.lbOutput);
