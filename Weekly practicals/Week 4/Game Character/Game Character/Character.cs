@@ -8,8 +8,8 @@ namespace Game_Character
 {
     public abstract class Character
     {
-        protected String Name;
-        protected IBattleMachine Weapon;
+        public String Name { get; set; }
+        public IBattleMachine Weapon { get; set; }
 
         public Character(String name)
         {
