@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Game_Character
 {
-    class Bow
+    public class Bow : Weapon
     {
+        public Bow()
+        {
+            action = "Shoot";
+            weaponName = "Bow";
+        }
     }
 }
