@@ -12,17 +12,29 @@ namespace Game_Character
 {
     public partial class Form1 : Form
     {
-        List<Character> characterList = new List<Character>;
+        List<Character> characterList = new List<Character>();
 
         public Form1()
         {
             InitializeComponent();
 
+            //Creating initial characters
             characterList.Add(new King("Ragnar"));
             characterList.Add(new Queen("Lagatha"));
             characterList.Add(new Knight("Bjorn"));
             characterList.Add(new Troll("Floki"));
+
+            //Adding characters to checkedListBox
+            foreach (Character character in characterList)
+            {
+                checkedListBox1.Items.Add(character.Name);
+                checkedListBox2.Items.Add(character.Name);
+            }
+        }
+
+        private void btnAddCharacter_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
-)
