@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace EncryptionTool
 {
-    public class Rot13 : IEncryptMachine
+    public class Rot13 : IEncryptDecryptMachine
     {
-        public String Encrypt(String str)
+        public String Encrypt(String stringToEncrypt)
+        {
+            throw new NotImplementedException();
+        }
+
+        public String Decrypt(String stringToDecrypt)
         {
             throw new NotImplementedException();
         }
