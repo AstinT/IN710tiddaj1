@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace EncryptionTool
 {
-    public interface IEncryptMachine
+    public interface IEncryptDecryptMachine
     {
         String Encrypt(String str);
+        String Decrypt(String str);
     }
 }
