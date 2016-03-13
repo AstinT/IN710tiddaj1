@@ -16,8 +16,7 @@ namespace EncryptionTool
 
         public Form1()
         {
-            InitializeComponent();
-            
+            InitializeComponent();           
         }
 
         private void btnEncrypt_Click(object sender, EventArgs e)
@@ -36,25 +35,20 @@ namespace EncryptionTool
             tbInput.Text = "";
         }
 
-
         private void btnDecrypt_Click(object sender, EventArgs e)
         {
-            //if (rbStringReverse.Checked)
-            //{
-            //    String input = tbInput.Text;
-            //    tbOutput.Text = stringReverse.Decrypt(input);
-            //    tbInput.Text = "";
-            //}
-            //else if (rbRot13.Checked)
-            //{
-            //    String input = tbInput.Text;
-            //    tbOutput.Text = rot13.Decrypt(input);
-            //    tbInput.Text = "";
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Please select an encryption algorithm.");
-            //}
+            if (rbStringReverse.Checked)
+            {
+                machine = new StringReverse();
+            }
+            else if (rbRot13.Checked)
+            {
+                machine = new Rot13();
+            }
+
+            String input = tbInput.Text;
+            tbOutput.Text = machine.Decrypt(input);
+            tbInput.Text = "";
         }
     }
 }
