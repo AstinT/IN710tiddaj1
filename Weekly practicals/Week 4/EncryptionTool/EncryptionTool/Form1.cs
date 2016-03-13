@@ -12,6 +12,7 @@ namespace EncryptionTool
 {
     public partial class Form1 : Form
     {
+        //Interface
         IEncryptDecryptMachine machine;
 
         public Form1()
@@ -19,12 +20,15 @@ namespace EncryptionTool
             InitializeComponent();           
         }
 
+        //Encrypt button
         private void btnEncrypt_Click(object sender, EventArgs e)
         {
+            //encrypts using StringReverse method
             if (rbStringReverse.Checked)
             {
                 machine = new StringReverse();
             }
+            //encrypts using ROT13 method
             else if (rbRot13.Checked)
             {
                 machine = new Rot13();
@@ -35,12 +39,15 @@ namespace EncryptionTool
             tbInput.Text = "";
         }
 
+        //Decrypt button
         private void btnDecrypt_Click(object sender, EventArgs e)
         {
+            //decrypts using StringReverse method
             if (rbStringReverse.Checked)
             {
                 machine = new StringReverse();
             }
+            //decrypts using Rot13 method
             else if (rbRot13.Checked)
             {
                 machine = new Rot13();

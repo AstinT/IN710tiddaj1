@@ -8,6 +8,7 @@ namespace EncryptionTool
 {
     public class StringReverse : IEncryptDecryptMachine
     {
+        //Reverse Encrypt method
         public String Encrypt(String stringToEncrypt)
         {
             char[] charArray = stringToEncrypt.ToCharArray();
@@ -15,6 +16,7 @@ namespace EncryptionTool
             return new String(charArray);
         }
 
+        //Reverse Decrypt method
         public String Decrypt(String stringToDecrypt)
         {
             char[] charArray = stringToDecrypt.ToCharArray();
