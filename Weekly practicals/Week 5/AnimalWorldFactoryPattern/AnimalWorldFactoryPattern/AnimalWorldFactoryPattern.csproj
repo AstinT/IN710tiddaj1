@@ -47,6 +47,7 @@
     <Compile Include="Animal.cs" />
     <Compile Include="AustraliaAnimalFactory.cs" />
     <Compile Include="Bison.cs" />
+    <Compile Include="Continent.cs" />
     <Compile Include="Crocodile.cs" />
     <Compile Include="Eagle.cs" />
     <Compile Include="Form1.cs">
