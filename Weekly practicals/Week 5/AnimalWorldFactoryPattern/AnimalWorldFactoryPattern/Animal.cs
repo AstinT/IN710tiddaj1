@@ -12,7 +12,7 @@ namespace AnimalWorldFactoryPattern
         protected String name;
         protected String family;
         protected String food;
-        protected Bitmap image { get; }
+        protected Bitmap image { get; set; }
 
         public override String ToString()
         {
@@ -23,6 +23,6 @@ namespace AnimalWorldFactoryPattern
             displayString += ". I eat " + food + ".";
 
             return displayString;
-        }
+        }
     }
 }
