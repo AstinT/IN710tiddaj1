@@ -37,7 +37,7 @@ namespace AnimalWorldFactoryPattern
                 currentAnimal = animalFactory.createAnimal(randAnimal);
 
                 displayBox.Items.Add(currentAnimal.ToString());
-                canvas.DrawImage(currentAnimal.Image, 20, 20 + (i * 120));
+                canvas.DrawImage(currentAnimal.Image, 20, 20 + (i * 120), 150, 100);
             }
         }
     }
