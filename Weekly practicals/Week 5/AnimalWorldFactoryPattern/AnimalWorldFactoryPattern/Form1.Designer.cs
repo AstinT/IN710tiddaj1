@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbDisplayBox = new System.Windows.Forms.ListBox();
             this.btnNorthAmerica = new System.Windows.Forms.Button();
             this.btnAustralia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lbDisplayBox
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(258, 22);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(415, 368);
-            this.listBox1.TabIndex = 0;
+            this.lbDisplayBox.FormattingEnabled = true;
+            this.lbDisplayBox.Location = new System.Drawing.Point(258, 22);
+            this.lbDisplayBox.Name = "lbDisplayBox";
+            this.lbDisplayBox.Size = new System.Drawing.Size(415, 368);
+            this.lbDisplayBox.TabIndex = 0;
             // 
             // btnNorthAmerica
             // 
-            this.btnNorthAmerica.Location = new System.Drawing.Point(258, 424);
+            this.btnNorthAmerica.Location = new System.Drawing.Point(258, 463);
             this.btnNorthAmerica.Name = "btnNorthAmerica";
             this.btnNorthAmerica.Size = new System.Drawing.Size(121, 23);
             this.btnNorthAmerica.TabIndex = 1;
@@ -53,7 +53,7 @@
             // 
             // btnAustralia
             // 
-            this.btnAustralia.Location = new System.Drawing.Point(552, 424);
+            this.btnAustralia.Location = new System.Drawing.Point(552, 463);
             this.btnAustralia.Name = "btnAustralia";
             this.btnAustralia.Size = new System.Drawing.Size(121, 23);
             this.btnAustralia.TabIndex = 2;
@@ -65,19 +65,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 480);
+            this.ClientSize = new System.Drawing.Size(700, 534);
             this.Controls.Add(this.btnAustralia);
             this.Controls.Add(this.btnNorthAmerica);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbDisplayBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbDisplayBox;
         private System.Windows.Forms.Button btnNorthAmerica;
         private System.Windows.Forms.Button btnAustralia;
     }
