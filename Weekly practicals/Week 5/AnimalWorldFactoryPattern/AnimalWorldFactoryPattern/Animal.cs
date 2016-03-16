@@ -12,7 +12,12 @@ namespace AnimalWorldFactoryPattern
         protected String name;
         protected String family;
         protected String food;
-        protected Bitmap image { get; set; }
+        protected Bitmap image;
+
+        public Bitmap Image
+        {
+            get { return image; }
+        }
 
         public override String ToString()
         {
