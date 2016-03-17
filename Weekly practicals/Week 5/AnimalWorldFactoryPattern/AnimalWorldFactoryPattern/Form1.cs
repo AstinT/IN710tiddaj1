@@ -41,5 +41,12 @@ namespace AnimalWorldFactoryPattern
             Continent australia = new Australia(lbDisplayBox, rGen, ANIMAL_TYPES, canvas);
             australia.runSimulation();
         }
+
+        private void btnNewZealand_Click(object sender, EventArgs e)
+        {
+            lbDisplayBox.Items.Clear();
+            Continent newZealand = new NewZealand(lbDisplayBox, rGen, ANIMAL_TYPES, canvas);
+            newZealand.runSimulation();
+        }
     }
 }
