@@ -12,8 +12,10 @@ namespace AnimalWorldFactoryPattern
 {
     public partial class Form1 : Form
     {
+        //Number of animals significant to a country
         public const int ANIMAL_TYPES = 3;
 
+        //Properties to be passed to the contients
         Random rGen;
         Graphics canvas;
 
@@ -22,12 +24,14 @@ namespace AnimalWorldFactoryPattern
             InitializeComponent();
         }
 
+        //Called when Form starts
         private void Form1_Load(object sender, EventArgs e)
         {
             rGen = new Random();
             canvas = this.CreateGraphics();
         }
 
+        //When clicked, Makes an instance of NorthAmerica
         private void btnNorthAmerica_Click(object sender, EventArgs e)
         {
             lbDisplayBox.Items.Clear();
@@ -35,6 +39,7 @@ namespace AnimalWorldFactoryPattern
             northAmerica.runSimulation();
         }
 
+        //When clicked, Makes an instance of Australia
         private void btnAustralia_Click(object sender, EventArgs e)
         {
             lbDisplayBox.Items.Clear();
@@ -42,6 +47,7 @@ namespace AnimalWorldFactoryPattern
             australia.runSimulation();
         }
 
+        //When clicked, Makes an instance of New Zealand
         private void btnNewZealand_Click(object sender, EventArgs e)
         {
             lbDisplayBox.Items.Clear();

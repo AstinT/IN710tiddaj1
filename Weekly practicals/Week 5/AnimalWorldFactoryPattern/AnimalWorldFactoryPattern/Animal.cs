@@ -9,16 +9,19 @@ namespace AnimalWorldFactoryPattern
 {
     public class Animal
     {
+        //Properties
         protected String name;
         protected String family;
         protected String food;
         protected Bitmap image;
 
+        //Read only
         public Bitmap Image
         {
             get { return image; }
         }
 
+        //Overriden ToString
         public override String ToString()
         {
             String displayString;

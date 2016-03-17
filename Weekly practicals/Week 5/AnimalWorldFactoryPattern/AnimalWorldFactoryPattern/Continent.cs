@@ -10,14 +10,17 @@ namespace AnimalWorldFactoryPattern
 {
     public abstract class Continent
     {
+        //Number of animals to create per Continent
         public const int ANIMAL_SIM_COUNT = 4;
 
+        //Properties
         protected ListBox displayBox;
         protected Random rGen;
         protected int nAnimalTypes;
         protected Graphics canvas;
         protected IAnimalFactory animalFactory;
 
+        //Constructor
         public Continent(ListBox displayBox, Random rGen, int nAnimalTypes, Graphics canvas)
         {
             this.displayBox = displayBox;
@@ -26,6 +29,7 @@ namespace AnimalWorldFactoryPattern
             this.canvas = canvas;
         }
 
+        //Makes the animals, displays thier picture and adds ToString to listbox
         public void runSimulation()
         {
             Animal currentAnimal = null;

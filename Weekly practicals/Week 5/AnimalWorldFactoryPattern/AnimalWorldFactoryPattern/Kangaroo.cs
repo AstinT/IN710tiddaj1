@@ -9,6 +9,7 @@ namespace AnimalWorldFactoryPattern
 {
     public class Kangaroo : Animal
     {
+        //Constructor
         public Kangaroo()
         {
             name = "Kangaroo";

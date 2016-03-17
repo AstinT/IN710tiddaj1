@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalWorldFactoryPattern
 {
+    //Interface for the the animalfactories
     public interface IAnimalFactory
     {
         Animal createAnimal(int animalCode);

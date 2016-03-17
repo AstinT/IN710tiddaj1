@@ -8,10 +8,13 @@ namespace AnimalWorldFactoryPattern
 {
     public class NewZealandAnimalFactory : IAnimalFactory
     {
+        //Interface method
+        //Creates new animal and returns it
         public Animal createAnimal(int animalCode)
         {
             Animal newAnimal = null;
 
+            //All possible animals from New Zealand
             switch (animalCode)
             {
                 case 0:
