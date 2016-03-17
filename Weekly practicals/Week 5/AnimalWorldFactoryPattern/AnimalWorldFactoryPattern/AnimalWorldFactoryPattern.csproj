@@ -59,11 +59,16 @@
     </Compile>
     <Compile Include="IAnimalFactory.cs" />
     <Compile Include="Kangaroo.cs" />
+    <Compile Include="Kea.cs" />
+    <Compile Include="Kiwi.cs" />
     <Compile Include="Koala.cs" />
+    <Compile Include="NewZealand.cs" />
+    <Compile Include="NewZealandAnimalFactory.cs" />
     <Compile Include="NorthAmerica.cs" />
     <Compile Include="NorthAmericaAnimalFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sheep.cs" />
     <Compile Include="Wolf.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

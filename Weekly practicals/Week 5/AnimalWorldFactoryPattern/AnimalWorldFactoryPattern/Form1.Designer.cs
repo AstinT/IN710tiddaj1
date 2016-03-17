@@ -31,6 +31,7 @@
             this.lbDisplayBox = new System.Windows.Forms.ListBox();
             this.btnNorthAmerica = new System.Windows.Forms.Button();
             this.btnAustralia = new System.Windows.Forms.Button();
+            this.btnNewZealand = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbDisplayBox
@@ -53,7 +54,7 @@
             // 
             // btnAustralia
             // 
-            this.btnAustralia.Location = new System.Drawing.Point(552, 463);
+            this.btnAustralia.Location = new System.Drawing.Point(408, 463);
             this.btnAustralia.Name = "btnAustralia";
             this.btnAustralia.Size = new System.Drawing.Size(121, 23);
             this.btnAustralia.TabIndex = 2;
@@ -61,11 +62,22 @@
             this.btnAustralia.UseVisualStyleBackColor = true;
             this.btnAustralia.Click += new System.EventHandler(this.btnAustralia_Click);
             // 
+            // btnNewZealand
+            // 
+            this.btnNewZealand.Location = new System.Drawing.Point(552, 463);
+            this.btnNewZealand.Name = "btnNewZealand";
+            this.btnNewZealand.Size = new System.Drawing.Size(121, 23);
+            this.btnNewZealand.TabIndex = 3;
+            this.btnNewZealand.Text = "New Zealand";
+            this.btnNewZealand.UseVisualStyleBackColor = true;
+            this.btnNewZealand.Click += new System.EventHandler(this.btnNewZealand_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 534);
+            this.Controls.Add(this.btnNewZealand);
             this.Controls.Add(this.btnAustralia);
             this.Controls.Add(this.btnNorthAmerica);
             this.Controls.Add(this.lbDisplayBox);
@@ -81,6 +93,7 @@
         private System.Windows.Forms.ListBox lbDisplayBox;
         private System.Windows.Forms.Button btnNorthAmerica;
         private System.Windows.Forms.Button btnAustralia;
+        private System.Windows.Forms.Button btnNewZealand;
     }
 }
 
