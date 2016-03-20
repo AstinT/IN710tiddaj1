@@ -16,5 +16,22 @@ namespace ComputerBuilder
         {
             InitializeComponent();
         }
+
+        //Form data fields
+        IComputerFactory currComputerFactory;
+
+        //Form methods
+        private void btnPrintSpec_Click(object sender, EventArgs e)
+        {
+            if (rbGaming.Checked)
+                currComputerFactory = new GameComputerFactory();
+            else if (rbBusiness.Checked)
+                currComputerFactory = new BusinessComputerFactory();
+            else
+                currComputerFactory = new MultimediaComputerFactory();
+
+            FactorySpecPrinter currSpecPrinter = new FactorySpecPrinter(currComputerFactory, lbDisplayBox);
+            currSpecPrinter.printSpec();
+        }
     }
 }
