@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComputerBuilder
 {
+    //Interface for the computer factories
     public interface IComputerFactory
     {
         Cpu buildCpu();

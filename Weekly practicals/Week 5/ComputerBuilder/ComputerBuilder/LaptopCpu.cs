@@ -7,6 +7,7 @@ namespace ComputerBuilder
 {
     public class LaptopCpu : Cpu
     {
+        //Constructor
         public LaptopCpu()
         {
             name = "Intel i7 4700MQ, 2.8Ghz";

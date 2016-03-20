@@ -7,6 +7,7 @@ namespace ComputerBuilder
 {
     public class GamingGpu : Gpu
     {
+        //Constructor
         public GamingGpu()
         {
             name = "Nvidia GTX960";

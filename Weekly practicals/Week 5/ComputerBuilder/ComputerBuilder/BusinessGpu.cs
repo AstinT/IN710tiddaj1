@@ -7,6 +7,7 @@ namespace ComputerBuilder
 {
     public class BusinessGpu : Gpu
     {
+        //Constructor
         public BusinessGpu()
         {
             name = "Radeon 7850";

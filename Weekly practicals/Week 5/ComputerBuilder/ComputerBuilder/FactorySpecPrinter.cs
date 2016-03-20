@@ -6,17 +6,21 @@ using System.Windows.Forms;
 
 namespace ComputerBuilder
 {
+    //This class handles all the printing
     public class FactorySpecPrinter
     {
+        //Properties
         private IComputerFactory factoryMaker;
         private ListBox displayBox;
 
+        //Constructor
         public FactorySpecPrinter(IComputerFactory factoryMaker, ListBox displayBox)
         {
             this.factoryMaker = factoryMaker;
             this.displayBox = displayBox;
         }       
     
+        //Prints to the form
         public void printSpec()
         {
             Cpu currCpu = factoryMaker.buildCpu();

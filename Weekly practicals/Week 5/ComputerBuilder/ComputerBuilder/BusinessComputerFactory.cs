@@ -7,16 +7,20 @@ namespace ComputerBuilder
 {
     public class BusinessComputerFactory : IComputerFactory
     {
+        //Interface methods
+        //Creates new cpu and returns it
         public Cpu buildCpu()
         {
             return new BusinessCpu();
         }
 
+        //Creates new ram and returns it
         public Ram buildRam()
         {
             return new BusinessRam();
         }
 
+        //Creates new gpu and returns it
         public Gpu buildGpu()
         {
             return new BusinessGpu();

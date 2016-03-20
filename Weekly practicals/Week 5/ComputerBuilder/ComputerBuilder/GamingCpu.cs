@@ -7,6 +7,7 @@ namespace ComputerBuilder
 {
     public class GamingCpu : Cpu
     {
+        //Constructor
         public GamingCpu()
         {
             name = "Intel i5 6600k, 3.5Ghz";

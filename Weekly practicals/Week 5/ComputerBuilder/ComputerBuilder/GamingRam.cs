@@ -7,6 +7,7 @@ namespace ComputerBuilder
 {
     public class GamingRam : Ram
     {
+        //Constructor
         public GamingRam()
         {
             name = "8GB RAM";

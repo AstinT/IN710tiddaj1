@@ -7,6 +7,7 @@ namespace ComputerBuilder
 {
     public class MultimediaRam : Ram
     {
+        //Constructor
         public MultimediaRam()
         {
             name = "16GB RAM";

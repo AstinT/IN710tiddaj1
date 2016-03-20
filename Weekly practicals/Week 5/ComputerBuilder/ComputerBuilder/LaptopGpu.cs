@@ -7,6 +7,7 @@ namespace ComputerBuilder
 {
     public class LaptopGpu : Gpu
     {
+        //Constructor
         public LaptopGpu()
         {
             name = "Nvidia GTX765m";

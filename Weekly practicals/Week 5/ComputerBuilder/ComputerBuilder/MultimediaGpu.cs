@@ -7,6 +7,7 @@ namespace ComputerBuilder
 {
     public class MultimediaGpu : Gpu
     {
+        //Constructor
         public MultimediaGpu()
         {
             name = "Nvidia GTX980";

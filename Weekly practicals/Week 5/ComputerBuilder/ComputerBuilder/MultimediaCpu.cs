@@ -7,6 +7,7 @@ namespace ComputerBuilder
 {
     public class MultimediaCpu : Cpu
     {
+        //Constructor
         public MultimediaCpu()
         {
             name = "Intel i7 6700k, 4.0Ghz";
