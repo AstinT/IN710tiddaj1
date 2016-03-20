@@ -23,12 +23,15 @@ namespace ComputerBuilder
         //Form methods
         private void btnPrintSpec_Click(object sender, EventArgs e)
         {
+            //Checks what radio button has been clicked and assigns the appropriate factory
             if (rbGaming.Checked)
                 currComputerFactory = new GameComputerFactory();
             else if (rbBusiness.Checked)
                 currComputerFactory = new BusinessComputerFactory();
-            else
+            else if (rbMultimedia.Checked)
                 currComputerFactory = new MultimediaComputerFactory();
+            else
+                currComputerFactory = new LaptopComputerFactory();
 
             FactorySpecPrinter currSpecPrinter = new FactorySpecPrinter(currComputerFactory, lbDisplayBox);
             currSpecPrinter.printSpec();

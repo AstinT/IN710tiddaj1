@@ -63,6 +63,10 @@
     <Compile Include="GamingRam.cs" />
     <Compile Include="Gpu.cs" />
     <Compile Include="IComputerFactory.cs" />
+    <Compile Include="LaptopComputerFactory.cs" />
+    <Compile Include="LaptopCpu.cs" />
+    <Compile Include="LaptopGpu.cs" />
+    <Compile Include="LaptopRam.cs" />
     <Compile Include="MultimediaComputerFactory.cs" />
     <Compile Include="MultimediaCpu.cs" />
     <Compile Include="MultimediaGpu.cs" />
