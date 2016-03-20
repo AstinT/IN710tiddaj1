@@ -20,7 +20,7 @@ namespace MixAndMatch
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadComboBoxes(cbHead);
-            LoadComboBoxes(cbBody);
+            LoadComboBoxes(cbTorso);
             LoadComboBoxes(cbLegs);
         }
 

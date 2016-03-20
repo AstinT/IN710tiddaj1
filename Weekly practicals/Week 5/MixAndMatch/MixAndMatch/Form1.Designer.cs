@@ -30,9 +30,9 @@
         {
             this.cbHead = new System.Windows.Forms.ComboBox();
             this.cbLegs = new System.Windows.Forms.ComboBox();
-            this.cbBody = new System.Windows.Forms.ComboBox();
+            this.cbTorso = new System.Windows.Forms.ComboBox();
             this.lblHead = new System.Windows.Forms.Label();
-            this.lblBody = new System.Windows.Forms.Label();
+            this.lblTorso = new System.Windows.Forms.Label();
             this.lblLegs = new System.Windows.Forms.Label();
             this.btnMakeMonster = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -55,14 +55,14 @@
             this.cbLegs.Size = new System.Drawing.Size(198, 21);
             this.cbLegs.TabIndex = 1;
             // 
-            // cbBody
+            // cbTorso
             // 
-            this.cbBody.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbBody.FormattingEnabled = true;
-            this.cbBody.Location = new System.Drawing.Point(464, 145);
-            this.cbBody.Name = "cbBody";
-            this.cbBody.Size = new System.Drawing.Size(198, 21);
-            this.cbBody.TabIndex = 2;
+            this.cbTorso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTorso.FormattingEnabled = true;
+            this.cbTorso.Location = new System.Drawing.Point(464, 145);
+            this.cbTorso.Name = "cbTorso";
+            this.cbTorso.Size = new System.Drawing.Size(198, 21);
+            this.cbTorso.TabIndex = 2;
             // 
             // lblHead
             // 
@@ -73,14 +73,14 @@
             this.lblHead.TabIndex = 3;
             this.lblHead.Text = "Head";
             // 
-            // lblBody
+            // lblTorso
             // 
-            this.lblBody.AutoSize = true;
-            this.lblBody.Location = new System.Drawing.Point(382, 148);
-            this.lblBody.Name = "lblBody";
-            this.lblBody.Size = new System.Drawing.Size(31, 13);
-            this.lblBody.TabIndex = 4;
-            this.lblBody.Text = "Body";
+            this.lblTorso.AutoSize = true;
+            this.lblTorso.Location = new System.Drawing.Point(382, 148);
+            this.lblTorso.Name = "lblTorso";
+            this.lblTorso.Size = new System.Drawing.Size(34, 13);
+            this.lblTorso.TabIndex = 4;
+            this.lblTorso.Text = "Torso";
             // 
             // lblLegs
             // 
@@ -108,9 +108,9 @@
             this.ClientSize = new System.Drawing.Size(703, 621);
             this.Controls.Add(this.btnMakeMonster);
             this.Controls.Add(this.lblLegs);
-            this.Controls.Add(this.lblBody);
+            this.Controls.Add(this.lblTorso);
             this.Controls.Add(this.lblHead);
-            this.Controls.Add(this.cbBody);
+            this.Controls.Add(this.cbTorso);
             this.Controls.Add(this.cbLegs);
             this.Controls.Add(this.cbHead);
             this.Name = "Form1";
@@ -125,9 +125,9 @@
 
         private System.Windows.Forms.ComboBox cbHead;
         private System.Windows.Forms.ComboBox cbLegs;
-        private System.Windows.Forms.ComboBox cbBody;
+        private System.Windows.Forms.ComboBox cbTorso;
         private System.Windows.Forms.Label lblHead;
-        private System.Windows.Forms.Label lblBody;
+        private System.Windows.Forms.Label lblTorso;
         private System.Windows.Forms.Label lblLegs;
         private System.Windows.Forms.Button btnMakeMonster;
     }
