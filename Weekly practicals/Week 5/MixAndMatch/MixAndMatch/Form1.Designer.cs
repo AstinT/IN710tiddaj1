@@ -35,6 +35,12 @@
             this.lblTorso = new System.Windows.Forms.Label();
             this.lblLegs = new System.Windows.Forms.Label();
             this.btnMakeMonster = new System.Windows.Forms.Button();
+            this.pbHead = new System.Windows.Forms.PictureBox();
+            this.pbTorso = new System.Windows.Forms.PictureBox();
+            this.pbLegs = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHead)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTorso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegs)).BeginInit();
             this.SuspendLayout();
             // 
             // cbHead
@@ -101,11 +107,41 @@
             this.btnMakeMonster.UseVisualStyleBackColor = true;
             this.btnMakeMonster.Click += new System.EventHandler(this.btnMakeMonster_Click);
             // 
+            // pbHead
+            // 
+            this.pbHead.Location = new System.Drawing.Point(13, 13);
+            this.pbHead.Name = "pbHead";
+            this.pbHead.Size = new System.Drawing.Size(346, 176);
+            this.pbHead.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbHead.TabIndex = 7;
+            this.pbHead.TabStop = false;
+            // 
+            // pbTorso
+            // 
+            this.pbTorso.Location = new System.Drawing.Point(13, 195);
+            this.pbTorso.Name = "pbTorso";
+            this.pbTorso.Size = new System.Drawing.Size(346, 176);
+            this.pbTorso.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTorso.TabIndex = 8;
+            this.pbTorso.TabStop = false;
+            // 
+            // pbLegs
+            // 
+            this.pbLegs.Location = new System.Drawing.Point(13, 377);
+            this.pbLegs.Name = "pbLegs";
+            this.pbLegs.Size = new System.Drawing.Size(346, 176);
+            this.pbLegs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLegs.TabIndex = 9;
+            this.pbLegs.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(703, 621);
+            this.ClientSize = new System.Drawing.Size(703, 572);
+            this.Controls.Add(this.pbLegs);
+            this.Controls.Add(this.pbTorso);
+            this.Controls.Add(this.pbHead);
             this.Controls.Add(this.btnMakeMonster);
             this.Controls.Add(this.lblLegs);
             this.Controls.Add(this.lblTorso);
@@ -116,6 +152,9 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbHead)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTorso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLegs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,6 +169,9 @@
         private System.Windows.Forms.Label lblTorso;
         private System.Windows.Forms.Label lblLegs;
         private System.Windows.Forms.Button btnMakeMonster;
+        private System.Windows.Forms.PictureBox pbHead;
+        private System.Windows.Forms.PictureBox pbTorso;
+        private System.Windows.Forms.PictureBox pbLegs;
     }
 }
 
