@@ -44,41 +44,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BodyPart.cs" />
-    <Compile Include="FairyHead.cs" />
-    <Compile Include="FairyLegs.cs" />
-    <Compile Include="FairyTorso.cs" />
+    <Compile Include="Body parts\BodyPart.cs" />
+    <Compile Include="Body parts\Monster parts\Fairy\FairyHead.cs" />
+    <Compile Include="Body parts\Monster parts\Fairy\FairyLegs.cs" />
+    <Compile Include="Body parts\Monster parts\Fairy\FairyTorso.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrankensteinHead.cs" />
-    <Compile Include="FrankensteinLegs.cs" />
-    <Compile Include="FrankensteinTorso.cs" />
-    <Compile Include="Head.cs" />
-    <Compile Include="HeadFactory.cs" />
-    <Compile Include="IBodyPartFactory.cs" />
-    <Compile Include="Legs.cs" />
-    <Compile Include="LegsFactory.cs" />
+    <Compile Include="Body parts\Monster parts\Frankenstein\FrankensteinHead.cs" />
+    <Compile Include="Body parts\Monster parts\Frankenstein\FrankensteinLegs.cs" />
+    <Compile Include="Body parts\Monster parts\Frankenstein\FrankensteinTorso.cs" />
+    <Compile Include="Body parts\Head.cs" />
+    <Compile Include="Factories\HeadFactory.cs" />
+    <Compile Include="Factories\IBodyPartFactory.cs" />
+    <Compile Include="Body parts\Legs.cs" />
+    <Compile Include="Factories\LegsFactory.cs" />
     <Compile Include="MonsterMaker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SkeletonHead.cs" />
-    <Compile Include="SkeletonLegs.cs" />
-    <Compile Include="SkeletonTorso.cs" />
-    <Compile Include="Torso.cs" />
-    <Compile Include="TorsoFactory.cs" />
-    <Compile Include="VampireHead.cs" />
-    <Compile Include="VampireLegs.cs" />
-    <Compile Include="VampireTorso.cs" />
-    <Compile Include="WerewolfHead.cs" />
-    <Compile Include="WerewolfLegs.cs" />
-    <Compile Include="WerewolfTorso.cs" />
-    <Compile Include="WitchHead.cs" />
-    <Compile Include="WitchLegs.cs" />
-    <Compile Include="WitchTorso.cs" />
+    <Compile Include="Body parts\Monster parts\Skeleton\SkeletonHead.cs" />
+    <Compile Include="Body parts\Monster parts\Skeleton\SkeletonLegs.cs" />
+    <Compile Include="Body parts\Monster parts\Skeleton\SkeletonTorso.cs" />
+    <Compile Include="Body parts\Torso.cs" />
+    <Compile Include="Factories\TorsoFactory.cs" />
+    <Compile Include="Body parts\Monster parts\Vampire\VampireHead.cs" />
+    <Compile Include="Body parts\Monster parts\Vampire\VampireLegs.cs" />
+    <Compile Include="Body parts\Monster parts\Vampire\VampireTorso.cs" />
+    <Compile Include="Body parts\Monster parts\Werewolf\WerewolfHead.cs" />
+    <Compile Include="Body parts\Monster parts\Werewolf\WerewolfLegs.cs" />
+    <Compile Include="Body parts\Monster parts\Werewolf\WerewolfTorso.cs" />
+    <Compile Include="Body parts\Monster parts\Witch\WitchHead.cs" />
+    <Compile Include="Body parts\Monster parts\Witch\WitchLegs.cs" />
+    <Compile Include="Body parts\Monster parts\Witch\WitchTorso.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
