@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace MixAndMatch
 {
+    //Factory for building a monster head
     public class HeadFactory : IBodyPartFactory
     {
+        //Creates a new head part and returns it
         public BodyPart createBodyPart(String characterString)
         {
             BodyPart newHeadPart = null;

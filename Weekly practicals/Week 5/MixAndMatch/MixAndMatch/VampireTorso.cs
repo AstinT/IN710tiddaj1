@@ -8,8 +8,10 @@ namespace MixAndMatch
 {
     public class VampireTorso : Torso
     {
+       //Constructor
        public VampireTorso()
         {
+            //Getting image
             image = Image.FromFile("Vampire_1.png");
         }
     }

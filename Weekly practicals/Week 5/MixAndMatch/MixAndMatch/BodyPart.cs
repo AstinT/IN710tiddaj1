@@ -9,6 +9,7 @@ namespace MixAndMatch
 {
     public class BodyPart
     {
+        //Image to be displayed
         protected Image image;
 
         //Read only

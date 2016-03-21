@@ -5,8 +5,10 @@ using System.Text;
 
 namespace MixAndMatch
 {
+    //Factory for building a monster torso
     public class TorsoFactory : IBodyPartFactory
     {
+        //Creates a new torso part and returns it
         public BodyPart createBodyPart(String characterString)
         {
             BodyPart newTorsoPart = null;

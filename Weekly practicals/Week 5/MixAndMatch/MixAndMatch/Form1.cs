@@ -17,6 +17,7 @@ namespace MixAndMatch
             InitializeComponent();
         }
 
+        //Loads all combo boxes when Form starts
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadComboBoxes(cbHead);
@@ -24,6 +25,7 @@ namespace MixAndMatch
             LoadComboBoxes(cbLegs);
         }
 
+        //Loads in the required monster types
         public void LoadComboBoxes(ComboBox comboBoxToLoad)
         {
             comboBoxToLoad.Items.Add("Fairy");
@@ -34,8 +36,10 @@ namespace MixAndMatch
             comboBoxToLoad.Items.Add("Witch");
         }
 
+        //Makes a monster when the button is clicked
         private void btnMakeMonster_Click(object sender, EventArgs e)
         {
+            //Checks to see if an option has been selected for each combo box
             if ((cbHead.SelectedItem != null) || (cbTorso.SelectedItem != null) || (cbLegs.SelectedItem != null))
             {
                 String selectedHead = cbHead.SelectedItem.ToString();
@@ -46,6 +50,7 @@ namespace MixAndMatch
                 monsterBuilder.createMonster();
             }
             else
+                //Pops message box
                 MessageBox.Show("Please select a head, torso and legs!");            
         }
     }

@@ -8,8 +8,10 @@ namespace MixAndMatch
 {
     public class FrankensteinHead : Head
     {
+        //Constructor
         public FrankensteinHead()
         {
+            //Getting image
             image = new Bitmap("Frankenstein_0.png");
         }
     }

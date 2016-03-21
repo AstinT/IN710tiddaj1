@@ -8,8 +8,10 @@ namespace MixAndMatch
 {
     public class WerewolfLegs : Legs
     {
+        //Constructor
         public WerewolfLegs()
         {
+            //Getting image
             image = Image.FromFile("Werewolf_2.png");
         }
     }

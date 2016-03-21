@@ -8,8 +8,10 @@ namespace MixAndMatch
 {
     public class FairyHead : Head
     {
+        //Constructor
         public FairyHead()
         {
+            //Getting image
             image = Image.FromFile("Fairy_0.png");
         }
     }
