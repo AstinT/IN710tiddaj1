@@ -36,7 +36,17 @@ namespace MixAndMatch
 
         private void btnMakeMonster_Click(object sender, EventArgs e)
         {
+            if ((cbHead.SelectedItem != null) || (cbTorso.SelectedItem != null) || (cbLegs.SelectedItem != null))
+            {
+                String selectedHead = cbHead.SelectedItem.ToString();
+                String selectedTorso = cbTorso.SelectedItem.ToString();
+                String selectedLegs = cbLegs.SelectedItem.ToString();
 
+                MonsterMaker monsterBuilder = new MonsterMaker(selectedHead, selectedTorso, selectedLegs, pbHead, pbTorso, pbLegs);
+                monsterBuilder.createMonster();
+            }
+            else
+                MessageBox.Show("Please select a head, torso and legs!");            
         }
     }
 }
