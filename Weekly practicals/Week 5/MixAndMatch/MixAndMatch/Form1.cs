@@ -40,7 +40,7 @@ namespace MixAndMatch
         private void btnMakeMonster_Click(object sender, EventArgs e)
         {
             //Checks to see if an option has been selected for each combo box
-            if ((cbHead.SelectedItem != null) || (cbTorso.SelectedItem != null) || (cbLegs.SelectedItem != null))
+            if ((cbHead.SelectedItem != null) && (cbTorso.SelectedItem != null) && (cbLegs.SelectedItem != null))
             {
                 String selectedHead = cbHead.SelectedItem.ToString();
                 String selectedTorso = cbTorso.SelectedItem.ToString();
