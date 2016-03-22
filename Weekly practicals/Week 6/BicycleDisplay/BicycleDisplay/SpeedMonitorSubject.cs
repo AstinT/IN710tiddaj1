@@ -10,6 +10,19 @@ namespace BicycleDisplay
         private List<IObserver> observerList;
         private int currentRpm;
 
+        //Constructor
+        public SpeedMonitorSubject()
+        {
+            currentRpm = 0;
+            observerList = new List<IObserver>();
+        }
+
+        public int CurrentRpm
+        {
+            get { return currentRpm; }
+            set { currentRpm = value; }
+        }
+
         public void AddObserver(IObserver o)
         {
             observerList.Add(o);
@@ -23,7 +36,10 @@ namespace BicycleDisplay
         public void NotifyObservers()
         {
             foreach (IObserver currentObserver in observerList)
+            {
                 currentObserver.Update(currentRpm);
+                currentObserver.Display();
+            }                
         }
     }
 }

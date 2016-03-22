@@ -14,13 +14,12 @@ namespace BicycleDisplay
         public KmsPerHourObserver(Label displayLabel, SpeedMonitorSubject bikeSubject)
             : base(displayLabel, bikeSubject)
         {
-            currentRpm = 0;
-            currentComputedValue = 0;
+
         }
 
         public override void Update(int data)
         {
-
+            currentComputedValue = (currentRpm * WHEEL_CIRCUMFERENCE * 60) / 100;
         }
     }
 }

@@ -12,14 +12,12 @@ namespace BicycleDisplay
         public CaloriesPerHourObserver(Label displayLabel, SpeedMonitorSubject bikeSubject)
             : base(displayLabel, bikeSubject)
         {
-            currentRpm = 0;
-            currentComputedValue = 0;
+
         }
 
         public override void Update(int data)
         {
-            int calPerHour = currentRpm * 5;
-            displayLabel.Text = calPerHour.ToString();
+            currentComputedValue = currentRpm * 5;
         }
     }
 }

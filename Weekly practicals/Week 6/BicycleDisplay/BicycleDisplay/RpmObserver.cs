@@ -12,13 +12,12 @@ namespace BicycleDisplay
         public RpmObserver(Label displayLabel, SpeedMonitorSubject bikeSubject) 
             : base(displayLabel, bikeSubject)
         {
-            currentRpm = 0;
-            currentComputedValue = 0;
+
         }
 
         public override void Update(int data)
         {
-            displayLabel.Text = currentRpm.ToString();
+            currentComputedValue = currentRpm;
         }
     }
 }

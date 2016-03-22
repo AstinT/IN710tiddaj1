@@ -18,13 +18,19 @@ namespace BicycleDisplay
         {
             this.displayLabel = displayLabel;
             this.bikeSubject = bikeSubject;
+
+            currentRpm = 0;
+            currentComputedValue = 0;
+
+            //Observer adds itselt
+            bikeSubject.AddObserver(this);
         }
 
         public abstract void Update(int data);
 
         public void Display()
         {
-            displayLabel.Text = currentComputedValue.ToString();
+            displayLabel.Text = currentComputedValue.ToString("F2");
         }
     }
 }
