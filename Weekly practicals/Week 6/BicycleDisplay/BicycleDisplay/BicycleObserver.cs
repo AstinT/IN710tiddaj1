@@ -26,7 +26,7 @@ namespace BicycleDisplay
             bikeSubject.AddObserver(this);
         }
 
-        public abstract void Update(int data);
+        public abstract void Update(int currentRpm);
 
         public void Display()
         {

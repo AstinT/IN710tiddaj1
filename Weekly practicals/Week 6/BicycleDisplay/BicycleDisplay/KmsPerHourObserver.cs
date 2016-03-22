@@ -17,7 +17,7 @@ namespace BicycleDisplay
 
         }
 
-        public override void Update(int data)
+        public override void Update(int currentRpm)
         {
             currentComputedValue = (currentRpm * WHEEL_CIRCUMFERENCE * 60) / 100;
         }

@@ -8,7 +8,7 @@ namespace BicycleDisplay
     public class SpeedMonitorSubject : ISubject
     {
         private List<IObserver> observerList;
-        private int currentRpm;
+        public int currentRpm;
 
         //Constructor
         public SpeedMonitorSubject()
