@@ -9,7 +9,7 @@ namespace BicycleDisplay
 {
     public class KmsPerHourObserver : BicycleObserver
     {
-        private const int WHEEL_CIRCUMFERENCE = 205;
+        private const double WHEEL_CIRCUMFERENCE = 2.05;
 
         public KmsPerHourObserver(Label displayLabel, SpeedMonitorSubject bikeSubject)
             : base(displayLabel, bikeSubject)
@@ -19,7 +19,7 @@ namespace BicycleDisplay
 
         public override void Update(int currentRpm)
         {
-            currentComputedValue = (currentRpm * WHEEL_CIRCUMFERENCE * 60) / 100;
+            currentComputedValue = (currentRpm * WHEEL_CIRCUMFERENCE * 60) * 0.001;
         }
     }
 }
