@@ -17,9 +17,9 @@ namespace BicycleDisplay
             observerList = new List<IObserver>();
         }
 
+        //set only
         public int CurrentRpm
         {
-            get { return currentRpm; }
             set { currentRpm = value; }
         }
 
