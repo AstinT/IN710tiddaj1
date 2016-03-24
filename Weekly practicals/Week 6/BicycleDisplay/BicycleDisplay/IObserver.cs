@@ -5,6 +5,7 @@ using System.Text;
 
 namespace BicycleDisplay
 {
+    //Interface for observer classes
     public interface IObserver
     {
         void Update(int data);

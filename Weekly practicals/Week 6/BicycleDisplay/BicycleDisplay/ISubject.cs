@@ -5,6 +5,7 @@ using System.Text;
 
 namespace BicycleDisplay
 {
+    //Interface for subject class
     public interface ISubject
     {
         void AddObserver(IObserver o);

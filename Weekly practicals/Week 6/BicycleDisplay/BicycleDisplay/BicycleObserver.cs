@@ -7,13 +7,16 @@ using System.Windows.Forms;
 
 namespace BicycleDisplay
 {
+    //Base class
     public abstract class BicycleObserver : IObserver
     {
+        //Properties
         protected int currentRpm;
         protected double currentComputedValue;
         protected Label displayLabel;
         protected SpeedMonitorSubject bikeSubject;
 
+        //Constructor
         public BicycleObserver(Label displayLabel, SpeedMonitorSubject bikeSubject)
         {
             this.displayLabel = displayLabel;
@@ -22,12 +25,14 @@ namespace BicycleDisplay
             currentRpm = 0;
             currentComputedValue = 0;
 
-            //Observer adds itselt
+            //Observer adds itself
             bikeSubject.AddObserver(this);
         }
 
         public abstract void Update(int currentRpm);
 
+        //Concrete method Display
+        //sets the display text to the currentComputedValue
         public void Display()
         {
             displayLabel.Text = currentComputedValue.ToString("F2");
