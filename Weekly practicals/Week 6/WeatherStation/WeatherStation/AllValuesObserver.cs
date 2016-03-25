@@ -16,16 +16,11 @@ namespace WeatherStation
         }
 
         //Update method
-        public override void Update(int currentTemprature, int currentHumidity, int currentBarometricPressure)
+        public override void Update(int currentTemprature, int currentHumidity, int currentPressure)
         {
-            
-        }
-
-        public override void Display()
-        {
-            displayBox.Items.Add(currentTemprature);
-            displayBox.Items.Add(currentHumidity);
-            displayBox.Items.Add(currentBarometricPressure);
+            computedTemprature = currentTemprature;
+            computedHumidity = currentHumidity;
+            computedPressure = currentPressure;
         }
     }
 }

@@ -12,7 +12,10 @@ namespace WeatherStation
         //Properties
         protected int currentTemprature;
         protected int currentHumidity;
-        protected int currentBarometricPressure;
+        protected int currentPressure;
+        protected int computedTemprature;
+        protected int computedHumidity;
+        protected int computedPressure;
         protected ListBox displayBox;
         protected WeatherMonitorSubject weatherSubject;
 
@@ -24,12 +27,24 @@ namespace WeatherStation
 
             currentTemprature = 0;
             currentHumidity = 0;
-            currentBarometricPressure = 0;
+            currentPressure = 0;
+            computedTemprature = 0;
+            computedHumidity = 0;
+            computedPressure = 0;
 
+            //Observer adds itself
             weatherSubject.AddObserver(this);
         }
 
-        public abstract void Update(int currentTemprature, int currentHumidity, int currentBarometricPressure);
-        public abstract void Display();
+        public abstract void Update(int currentTemprature, int currentHumidity, int currentPressure);
+
+        //Virtual method because ForecastObserver needs to display information differently using strings.
+        public virtual void Display()
+        {
+            displayBox.Items.Clear();
+            displayBox.Items.Add(computedTemprature);
+            displayBox.Items.Add(computedHumidity);
+            displayBox.Items.Add(computedPressure);  
+        }
     }
 }

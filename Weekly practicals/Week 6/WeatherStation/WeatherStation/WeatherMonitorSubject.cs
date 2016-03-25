@@ -12,14 +12,14 @@ namespace WeatherStation
         private List<IObserver> observerList;
         private int currentTemprature;
         private int currentHumidity;
-        private int currentBarometricPressure;
+        private int currentPressure;
 
         //Constructor
         public WeatherMonitorSubject()
         {
             currentTemprature = 0;
             currentHumidity = 0;
-            currentBarometricPressure = 0;
+            currentPressure = 0;
 
             observerList = new List<IObserver>();
         }
@@ -39,7 +39,7 @@ namespace WeatherStation
         //set only
         public int BarometricPressure
         {
-            set { currentBarometricPressure = value; }
+            set { currentPressure = value; }
         }
 
         //Adds an observer to the observer list
@@ -59,7 +59,7 @@ namespace WeatherStation
         {
             foreach (IObserver currentObserver in observerList)
             {
-                currentObserver.Update(currentTemprature, currentHumidity, currentBarometricPressure);
+                currentObserver.Update(currentTemprature, currentHumidity, currentPressure);
                 currentObserver.Display();
             }
         }

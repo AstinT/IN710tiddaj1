@@ -18,10 +18,49 @@ namespace WeatherStation
         public Form1()
         {
             InitializeComponent();
+
+            subject = new WeatherMonitorSubject();
+
+            //new observers
+            new AllValuesObserver(lbReadings, subject);
+            new AverageObserver(lbAverageReadings, subject);
+            new ForecastObserver(lbForecast, subject);
         }
 
         private void btnUpdateMeasurements_Click(object sender, EventArgs e)
         {
+            int temperature;
+            int humidity;
+            int barometricPressure;
+
+            //try convert input string to int
+            if (Int32.TryParse(tbTemprature.Text, out temperature) &&
+                Int32.TryParse(tbHumidity.Text, out humidity) &&
+                Int32.TryParse(tbBarometricPressure.Text, out barometricPressure))
+            {
+                if ((humidity < 0) || (humidity > 100))
+                {
+                    MessageBox.Show("Please enter a humidity between 0-100%.");
+                }                    
+                else
+                {
+                     //set
+                    subject.Temprature = temperature;
+                    subject.Humidity = humidity;
+                    subject.BarometricPressure = barometricPressure;
+                    //Notify all observers
+                    subject.NotifyObservers();
+                }
+               
+            }
+            //if nothing is entered or if entered string is not a number
+            else
+                MessageBox.Show("Please enter a number and fill out all text boxes.");
+
+            tbTemprature.Text = "";
+            tbHumidity.Text = "";
+            tbBarometricPressure.Text = "";
+
         }
     }
 }
