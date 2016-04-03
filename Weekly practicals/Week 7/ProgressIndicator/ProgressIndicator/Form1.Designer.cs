@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbProgressBar = new System.Windows.Forms.RadioButton();
+            this.rbTrackBar = new System.Windows.Forms.RadioButton();
+            this.rbNumericUpDown = new System.Windows.Forms.RadioButton();
             this.btnStart = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.rbNumericUpDown = new System.Windows.Forms.RadioButton();
-            this.rbTrackBar = new System.Windows.Forms.RadioButton();
-            this.rbProgressBar = new System.Windows.Forms.RadioButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
@@ -53,6 +53,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Progress Indicators";
             // 
+            // rbProgressBar
+            // 
+            this.rbProgressBar.AutoSize = true;
+            this.rbProgressBar.Location = new System.Drawing.Point(11, 93);
+            this.rbProgressBar.Name = "rbProgressBar";
+            this.rbProgressBar.Size = new System.Drawing.Size(82, 17);
+            this.rbProgressBar.TabIndex = 2;
+            this.rbProgressBar.TabStop = true;
+            this.rbProgressBar.Text = "ProgressBar";
+            this.rbProgressBar.UseVisualStyleBackColor = true;
+            // 
+            // rbTrackBar
+            // 
+            this.rbTrackBar.AutoSize = true;
+            this.rbTrackBar.Location = new System.Drawing.Point(11, 62);
+            this.rbTrackBar.Name = "rbTrackBar";
+            this.rbTrackBar.Size = new System.Drawing.Size(72, 17);
+            this.rbTrackBar.TabIndex = 1;
+            this.rbTrackBar.TabStop = true;
+            this.rbTrackBar.Text = "Track Bar";
+            this.rbTrackBar.UseVisualStyleBackColor = true;
+            // 
+            // rbNumericUpDown
+            // 
+            this.rbNumericUpDown.AutoSize = true;
+            this.rbNumericUpDown.Location = new System.Drawing.Point(11, 29);
+            this.rbNumericUpDown.Name = "rbNumericUpDown";
+            this.rbNumericUpDown.Size = new System.Drawing.Size(112, 17);
+            this.rbNumericUpDown.TabIndex = 0;
+            this.rbNumericUpDown.TabStop = true;
+            this.rbNumericUpDown.Text = "Numeric Up Down";
+            this.rbNumericUpDown.UseVisualStyleBackColor = true;
+            // 
             // btnStart
             // 
             this.btnStart.Location = new System.Drawing.Point(12, 148);
@@ -66,6 +99,7 @@
             // progressBar1
             // 
             this.progressBar1.Location = new System.Drawing.Point(24, 271);
+            this.progressBar1.Maximum = 10;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(542, 23);
             this.progressBar1.TabIndex = 2;
@@ -76,39 +110,6 @@
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(542, 45);
             this.trackBar1.TabIndex = 3;
-            // 
-            // rbNumericUpDown
-            // 
-            this.rbNumericUpDown.AutoSize = true;
-            this.rbNumericUpDown.Location = new System.Drawing.Point(11, 29);
-            this.rbNumericUpDown.Name = "rbNumericUpDown";
-            this.rbNumericUpDown.Size = new System.Drawing.Size(112, 17);
-            this.rbNumericUpDown.TabIndex = 0;
-            this.rbNumericUpDown.TabStop = true;
-            this.rbNumericUpDown.Text = "Numeric Up Down";
-            this.rbNumericUpDown.UseVisualStyleBackColor = true;
-            // 
-            // rbTrackBar
-            // 
-            this.rbTrackBar.AutoSize = true;
-            this.rbTrackBar.Location = new System.Drawing.Point(11, 62);
-            this.rbTrackBar.Name = "rbTrackBar";
-            this.rbTrackBar.Size = new System.Drawing.Size(72, 17);
-            this.rbTrackBar.TabIndex = 1;
-            this.rbTrackBar.TabStop = true;
-            this.rbTrackBar.Text = "Track Bar";
-            this.rbTrackBar.UseVisualStyleBackColor = true;
-            // 
-            // rbProgressBar
-            // 
-            this.rbProgressBar.AutoSize = true;
-            this.rbProgressBar.Location = new System.Drawing.Point(11, 93);
-            this.rbProgressBar.Name = "rbProgressBar";
-            this.rbProgressBar.Size = new System.Drawing.Size(82, 17);
-            this.rbProgressBar.TabIndex = 2;
-            this.rbProgressBar.TabStop = true;
-            this.rbProgressBar.Text = "ProgressBar";
-            this.rbProgressBar.UseVisualStyleBackColor = true;
             // 
             // numericUpDown1
             // 
