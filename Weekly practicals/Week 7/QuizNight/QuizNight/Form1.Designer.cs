@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbChildren = new System.Windows.Forms.RadioButton();
+            this.rbAdult = new System.Windows.Forms.RadioButton();
             this.tbCorrect = new System.Windows.Forms.TextBox();
             this.tbIncorrect = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,35 +43,35 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.rbChildren);
+            this.groupBox1.Controls.Add(this.rbAdult);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(153, 142);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // radioButton2
+            // rbChildren
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 82);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(63, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Children";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbChildren.AutoSize = true;
+            this.rbChildren.Location = new System.Drawing.Point(6, 82);
+            this.rbChildren.Name = "rbChildren";
+            this.rbChildren.Size = new System.Drawing.Size(63, 17);
+            this.rbChildren.TabIndex = 1;
+            this.rbChildren.TabStop = true;
+            this.rbChildren.Text = "Children";
+            this.rbChildren.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbAdult
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(7, 40);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Adults";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbAdult.AutoSize = true;
+            this.rbAdult.Location = new System.Drawing.Point(7, 40);
+            this.rbAdult.Name = "rbAdult";
+            this.rbAdult.Size = new System.Drawing.Size(54, 17);
+            this.rbAdult.TabIndex = 0;
+            this.rbAdult.TabStop = true;
+            this.rbAdult.Text = "Adults";
+            this.rbAdult.UseVisualStyleBackColor = true;
             // 
             // tbCorrect
             // 
@@ -113,6 +113,7 @@
             this.btnSubmit.TabIndex = 5;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label3
             // 
@@ -157,8 +158,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbChildren;
+        private System.Windows.Forms.RadioButton rbAdult;
         private System.Windows.Forms.TextBox tbCorrect;
         private System.Windows.Forms.TextBox tbIncorrect;
         private System.Windows.Forms.Label label1;
