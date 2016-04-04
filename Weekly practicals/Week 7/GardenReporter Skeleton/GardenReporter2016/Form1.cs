@@ -12,18 +12,22 @@ namespace GardenReporter2016
 {
     public partial class Form1 : Form
     {
+        //Properties
         GardenManager gardenManager;
+
         public Form1()
         {
             InitializeComponent();
         }
 
+        //Loads when for is created
         private void Form1_Load(object sender, EventArgs e)
         {
-            gardenManager = new GardenManager();
+            gardenManager = new GardenManager(listBox1);
             populateDummyData();
         }
 
+        //Adding dummy data
         private void populateDummyData()
         {
             Garden garden1 = new Garden(10, 20, "Savitch");
@@ -45,14 +49,17 @@ namespace GardenReporter2016
             gardenManager.AddGarden(garden3);
         }
 
+        //Button click methods
         private void btnArea_Click(object sender, EventArgs e)
         {
-            /* YOUR CODE HERE */
+            listBox1.Items.Clear();
+            gardenManager.ProcessGardens(new GardenDelegate(gardenManager.DisplayGardenArea));
         }
 
         private void btnCharges_Click(object sender, EventArgs e)
         {
-            /* YOUR CODE HERE */
+            listBox1.Items.Clear();
+            gardenManager.ProcessGardens(new GardenDelegate(gardenManager.DisplayGardenCharges));
         }
     }
 }

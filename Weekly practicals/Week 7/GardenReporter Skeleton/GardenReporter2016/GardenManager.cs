@@ -7,12 +7,11 @@ using System.Windows.Forms;
 
 namespace GardenReporter2016
 {
+    //Delegate
+    public delegate String GardenDelegate(Garden garden);
+
     public class GardenManager
     {
-        //Delegate
-        public delegate String GardenDelegate(Garden garden);
-        GardenDelegate gardenDelegate;
-
         //Properties
         List<Garden> gardenList;
         ListBox displayBox;
@@ -22,7 +21,6 @@ namespace GardenReporter2016
         {
             gardenList = new List<Garden>();
             this.displayBox = displayBox;
-            gardenDelegate = null;
         }
 
         //Methods
@@ -31,22 +29,25 @@ namespace GardenReporter2016
             gardenList.Add(newGarden);
         }
 
-        public void ProcessGardens()
+        //Displays different information depending on what method it is passed
+        public void ProcessGardens(GardenDelegate operation)
         {
             foreach(Garden currGarden in gardenList)
             {
-
+                displayBox.Items.Add(operation(currGarden));
             }
         }
 
-        public String CalculateGardenArea(Garden garden)
+        public String DisplayGardenArea(Garden garden)
         {
-
+            String reportString = String.Format("{0,-14}:{1,8:f2}", garden.OwnerName, garden.GetArea());
+            return reportString;
         }
 
-        public String CalculateGardenCharges(Garden garden)
+        public String DisplayGardenCharges(Garden garden)
         {
-
+            String reportString = String.Format("{0,-14}:{1,8:f2}", garden.OwnerName, garden.GetAccountBalance());
+            return reportString;
         }
     }
 }
