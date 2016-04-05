@@ -15,10 +15,14 @@ namespace FireAlarm
         //Event
         public event FireEventHandler FireEvent;
 
+        //Called from form.
         public void OnFireEvent(EFireCategory fCat)
         {
+            //Passes current fire category
             FireAlarmEventArgs args = new FireAlarmEventArgs(fCat);
 
+            //If FireEvent observer list is not empty...
+            //Passes args to all subscribed observers
             if (FireEvent != null)
                 FireEvent(this, args);
         }

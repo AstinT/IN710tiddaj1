@@ -9,6 +9,7 @@ namespace FireAlarm
 {
     public class InstructionsObserver : FireAlarmObserverBase
     {
+        //Constructor
         public InstructionsObserver(FireAlarmSubject subject) : base(subject)
         {
             //nothing here
@@ -17,6 +18,7 @@ namespace FireAlarm
         public override void AlarmMethod(object fireSubject, FireAlarmEventArgs args)
         {
             String message = "Fire is " + args.FireCategory.ToString().ToLower() + ".";
+            //Switch statement checks what fire category was passed in.
             switch (args.FireCategory)
             {
                 case EFireCategory.MINOR:

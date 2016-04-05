@@ -9,9 +9,11 @@ namespace FireAlarm
 {
     public class BeepObserver : FireAlarmObserverBase
     {
+        //Import old kernel beep
         [DllImport("kernel32.dll")]
         public static extern bool Beep(int freq, int duration);
 
+        //Constructor
         public BeepObserver(FireAlarmSubject subject) : base(subject)
         {
             //nothing here
@@ -19,6 +21,7 @@ namespace FireAlarm
 
         public override void AlarmMethod(object fireSubject, FireAlarmEventArgs args)
         {
+            //Switch statement checks what fire category was passed in.
             switch (args.FireCategory)
             {
                 case EFireCategory.MINOR:
