@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace FireAlarm
 {
-    class FireAlarmObserverBase
+    public abstract class FireAlarmObserverBase
     {
+        protected FireAlarmSubject subject;
+
+        public FireAlarmObserverBase(FireAlarmSubject subject)
+        {
+            this.subject = subject;
+
+            FireAlarmSubject.FireEventHandler handler =
+                new FireAlarmSubject.FireEventHandler(AlarmMethod);
+
+            subject.FireEvent += handler;
+        }
+
+        public abstract void AlarmMethod(object fireSubject, FireAlarmEventArgs args);
     }
 }
