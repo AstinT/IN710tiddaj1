@@ -16,7 +16,7 @@ namespace FireAlarm
 
         public override void AlarmMethod(object fireSubject, FireAlarmEventArgs args)
         {
-            String message = "Fire is " + args.FireCategory.ToString() + ".";
+            String message = "Fire is " + args.FireCategory.ToString().ToLower() + ".";
             switch (args.FireCategory)
             {
                 case EFireCategory.MINOR:
