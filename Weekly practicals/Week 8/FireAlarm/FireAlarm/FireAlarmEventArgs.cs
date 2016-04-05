@@ -9,7 +9,7 @@ namespace FireAlarm
     //Enum
     public enum EFireCategory { MINOR, SERIOUS, INFERNO };
 
-    class FireAlarmEventArgs
+    public class FireAlarmEventArgs
     {
         //Properties
         public EFireCategory FireCategory { get; set; }
