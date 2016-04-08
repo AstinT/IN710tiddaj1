@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ProgressIndicator.Properties
+namespace ProgressIndicatorEvent.Properties
 {
 
 
