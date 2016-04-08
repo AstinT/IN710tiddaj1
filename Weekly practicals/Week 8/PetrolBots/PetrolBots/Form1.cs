@@ -14,6 +14,7 @@ namespace PetrolBots
     {
         private List<PetrolBot> botList;
         private List<Ship> shipList;
+        private Graphics mainCanvas;
 
         public Form1()
         {
@@ -22,36 +23,30 @@ namespace PetrolBots
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            PetrolBot bot1 = new PetrolBot();
-            PetrolBot bot2 = new PetrolBot();
-            PetrolBot bot3 = new PetrolBot();
-            PetrolBot bot4 = new PetrolBot();
-            PetrolBot bot5 = new PetrolBot();
+            Height = 600;
+            Width = 600;
 
-            botList.Add(bot1);
-            botList.Add(bot2);
-            botList.Add(bot3);
-            botList.Add(bot4);
-            botList.Add(bot5);
+            mainCanvas = CreateGraphics();
 
-            Ship ship1 = new Ship();
-            Ship ship2 = new Ship();
-            Ship ship3 = new Ship();
-            Ship ship4 = new Ship();
-            Ship ship5 = new Ship();
+            shipList = new List<Ship>();
+            botList = new List<PetrolBot>();
 
+            Ship ship1 = new Ship(mainCanvas, 0, 0);
             shipList.Add(ship1);
-            shipList.Add(ship2);
-            shipList.Add(ship3);
-            shipList.Add(ship4);
-            shipList.Add(ship5);
+
+            PetrolBot bot1 = new PetrolBot(ship1, mainCanvas);
+            botList.Add(bot1);
 
             timer.Enabled = true;
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-
+            foreach(Ship currShip in shipList)
+            {
+                mainCanvas.Clear(Color.White);
+                currShip.MoveShip();
+            }
         }
     }
 }
