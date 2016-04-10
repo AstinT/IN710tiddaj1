@@ -12,7 +12,6 @@ namespace PetrolBots
         //Constants
         private const int BOT_INITIAL_X = 100;
         private const int BOT_INITIAL_Y = 100;
-        private const int BASE_HEIGHT = 30;
 
         //Fields
         private Ship subject;
@@ -47,7 +46,6 @@ namespace PetrolBots
             //Go to ship position
             currentPosition.X = args.shipX + 20;
             currentPosition.Y = args.shipY + 20;
-            Draw();
         }
 
         public void FullOfFuelEventHandler(object subject, EventArgs args)
@@ -55,15 +53,10 @@ namespace PetrolBots
             //Return to base
             currentPosition.X = basePosition.X;
             currentPosition.Y = basePosition.Y;
-            Draw();
         }
 
         public void Draw()
         {
-            //Make a balck rectangle for the petrol bot base
-            SolidBrush baseBrush = new SolidBrush(Color.Black);
-            mainCanvas.FillRectangle(baseBrush, 0, (clientSize.Height - BASE_HEIGHT), clientSize.Width, BASE_HEIGHT);
-
             //Draw bot
             SolidBrush petrolBotBrush = new SolidBrush(botColor);
             mainCanvas.FillEllipse(petrolBotBrush, currentPosition.X, currentPosition.Y, 10, 10);
