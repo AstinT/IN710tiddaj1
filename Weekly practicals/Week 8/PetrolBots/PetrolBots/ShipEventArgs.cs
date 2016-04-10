@@ -8,9 +8,11 @@ namespace PetrolBots
 {
     public class ShipEventArgs : EventArgs
     {
+        //Fields
         public int shipX { get; set; }
         public int shipY { get; set; }
 
+        //Constructor
         public ShipEventArgs(int currShipX, int currShipY)
         {
             shipX = currShipX;
