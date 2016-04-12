@@ -15,10 +15,7 @@ namespace Predicate_Practical
         //Constant
         private const int NUM_OF_GENERATED_RANDOMS = 10;
 
-        //Delegate
-        Predicate<int> selectNums;
-
-        //Properties
+        //Fields
         List<int> randNumList;
 
         public Form1()
@@ -29,7 +26,6 @@ namespace Predicate_Practical
         //Intialising
         private void Form1_Load(object sender, EventArgs e)
         {
-            selectNums = null;
             randNumList = null;
         }
 
@@ -49,31 +45,18 @@ namespace Predicate_Practical
             }
         }
 
-        //Checks if passed in int is even
-        public bool isEven(int inputData)
-        {
-            bool isAnEvenNumber = ((inputData % 2) == 0);
-            return isAnEvenNumber;
-        }
-
-        //Checks if passed in int is less than ten
-        public bool isLessThanTen(int inputData)
-        {
-            bool isLessThanTen = (inputData < 10);
-            return isLessThanTen;
-        }
-
-        //Gets passed a Predicate method and loops over randNumList
+        //Passed a Predicate delegate. Passed in as a lambda expression
         public void listLoopMethod(Predicate<int> operation)
         {
             if (randNumList != null)
             {
-                foreach (int currInt in randNumList)
+                //Makes a list of numbers depending what operation is passed in
+                List<int> filteredNums = randNumList.FindAll(operation);
+
+                foreach (int currInt in filteredNums)
                 {
-                    if (operation(currInt))
-                    {
-                        lbSelectedNumbers.Items.Add(currInt);
-                    }
+                    //Add all filtered nums too listbox
+                    lbSelectedNumbers.Items.Add(currInt);
                 }
             }
         }
@@ -82,15 +65,15 @@ namespace Predicate_Practical
         private void btnEvenNumbers_Click(object sender, EventArgs e)
         {
             lbSelectedNumbers.Items.Clear();
-            selectNums = new Predicate<int>(isEven);
-            listLoopMethod(selectNums);
+            //Lambda expression - find all evens
+            listLoopMethod((x) => (x % 2) == 0);
         }
 
         private void btnNumLess10_Click(object sender, EventArgs e)
         {
             lbSelectedNumbers.Items.Clear();
-            selectNums = new Predicate<int>(isLessThanTen);
-            listLoopMethod(selectNums);
+            //Lambda expression - find nums less than 10
+            listLoopMethod((x) => x < 10);
         }
     }
 }
