@@ -20,5 +20,11 @@ namespace CityDatabase
             CountryName = countryName;
             Population = population;
         }
+
+        //Methods
+        public override String ToString()
+        {
+            return String.Format("{0,-20} | {1,-20} | {2,10}", CityName, CountryName, Population);
+        }
     }
 }

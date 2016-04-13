@@ -26,13 +26,13 @@ namespace CityDatabase
             cityList = new List<City>();
 
             //New Zealand Cities
-            City city1 = new City("Dunedin", "new zealand", 127500);
-            City city2 = new City("Christchurch", "new zealand", 366100);
-            City city3 = new City("Wellington", "new zealand", 204000);
+            City city1 = new City("Dunedin", "New Zealand", 127500);
+            City city2 = new City("Christchurch", "New Zealand", 366100);
+            City city3 = new City("Wellington", "New Zealand", 204000);
 
             //United States of America Cities
-            City city4 = new City("New York", "usa", 8406000);
-            City city5 = new City("Boston", "usa", 645966);
+            City city4 = new City("New York", "Usa", 8406000);
+            City city5 = new City("Boston", "Usa", 645966);
 
             //Add to cityList
             cityList.Add(city1);
@@ -46,7 +46,7 @@ namespace CityDatabase
         public void SearchCityList()
         {
             //Gets entered country
-            String searchedCountry = tbSearchCountry.Text.ToString().ToLower();
+            String searchedCountry = tbSearchCountry.Text.ToString();
 
             //Func delegate takes two String arguments and returns a bool
             //Lambda expression if city1 is equal to city2 returns true. If not equal return false.
@@ -57,7 +57,7 @@ namespace CityDatabase
             {
                 //Compares the entered country to a country in list
                 if (searchCities(searchedCountry, currCity.CountryName))
-                    listBox.Items.Add(currCity.CityName);
+                    listBox.Items.Add(currCity.ToString());
             }
 
             //If listBox has no items, nothing was found.
@@ -70,6 +70,15 @@ namespace CityDatabase
             tbSearchCountry.Text = "";
         }
 
+        //Multiply population by 3
+        public void MultiplyPopulationBy3()
+        {
+            //Lambda expression multiples population by 3
+            cityList.ForEach((c) => c.Population *= 3);
+            //Lambda expression adds all list items ToString to listbox
+            cityList.ForEach((c) => listBox.Items.Add(c.ToString()));
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             //Clears listbox
@@ -80,6 +89,13 @@ namespace CityDatabase
                 SearchCityList();
             else
                 MessageBox.Show("Please enter a country!");
+        }
+
+        private void btnMultiplyPopulation_Click(object sender, EventArgs e)
+        {
+            //Clears listbox
+            listBox.Items.Clear();
+            MultiplyPopulationBy3();
         }
     }
 }

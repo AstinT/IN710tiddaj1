@@ -29,29 +29,24 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbSearchCountry = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.tbSearchCountry = new System.Windows.Forms.TextBox();
             this.listBox = new System.Windows.Forms.ListBox();
+            this.btnMultiplyPopulation = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnMultiplyPopulation);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Controls.Add(this.tbSearchCountry);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(356, 74);
+            this.groupBox1.Size = new System.Drawing.Size(356, 111);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Enter a country";
-            // 
-            // tbSearchCountry
-            // 
-            this.tbSearchCountry.Location = new System.Drawing.Point(6, 32);
-            this.tbSearchCountry.Name = "tbSearchCountry";
-            this.tbSearchCountry.Size = new System.Drawing.Size(177, 20);
-            this.tbSearchCountry.TabIndex = 0;
             // 
             // btnSearch
             // 
@@ -63,13 +58,30 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // tbSearchCountry
+            // 
+            this.tbSearchCountry.Location = new System.Drawing.Point(6, 32);
+            this.tbSearchCountry.Name = "tbSearchCountry";
+            this.tbSearchCountry.Size = new System.Drawing.Size(177, 20);
+            this.tbSearchCountry.TabIndex = 0;
+            // 
             // listBox
             // 
             this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(13, 103);
+            this.listBox.Location = new System.Drawing.Point(13, 142);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(353, 238);
+            this.listBox.Size = new System.Drawing.Size(353, 199);
             this.listBox.TabIndex = 1;
+            // 
+            // btnMultiplyPopulation
+            // 
+            this.btnMultiplyPopulation.Location = new System.Drawing.Point(189, 71);
+            this.btnMultiplyPopulation.Name = "btnMultiplyPopulation";
+            this.btnMultiplyPopulation.Size = new System.Drawing.Size(157, 23);
+            this.btnMultiplyPopulation.TabIndex = 2;
+            this.btnMultiplyPopulation.Text = "Multiply Population";
+            this.btnMultiplyPopulation.UseVisualStyleBackColor = true;
+            this.btnMultiplyPopulation.Click += new System.EventHandler(this.btnMultiplyPopulation_Click);
             // 
             // Form1
             // 
@@ -93,6 +105,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox tbSearchCountry;
         private System.Windows.Forms.ListBox listBox;
+        private System.Windows.Forms.Button btnMultiplyPopulation;
     }
 }
 
