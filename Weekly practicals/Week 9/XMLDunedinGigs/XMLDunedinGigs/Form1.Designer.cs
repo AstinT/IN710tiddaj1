@@ -36,7 +36,13 @@
             this.btnAllUpcomingEvents = new System.Windows.Forms.Button();
             this.btnHardRock = new System.Windows.Forms.Button();
             this.btnCurrentMonth = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.btnBandMembers = new System.Windows.Forms.Button();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colInstrument = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -53,6 +59,7 @@
             this.colDateTime});
             this.dataGridView1.Location = new System.Drawing.Point(13, 99);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(567, 387);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -60,21 +67,25 @@
             // 
             this.colBandName.HeaderText = "Band Name";
             this.colBandName.Name = "colBandName";
+            this.colBandName.ReadOnly = true;
             // 
             // colGenre
             // 
             this.colGenre.HeaderText = "Genre";
             this.colGenre.Name = "colGenre";
+            this.colGenre.ReadOnly = true;
             // 
             // colVenue
             // 
             this.colVenue.HeaderText = "Venue";
             this.colVenue.Name = "colVenue";
+            this.colVenue.ReadOnly = true;
             // 
             // colDateTime
             // 
             this.colDateTime.HeaderText = "Date and Time";
             this.colDateTime.Name = "colDateTime";
+            this.colDateTime.ReadOnly = true;
             // 
             // btnAllUpcomingEvents
             // 
@@ -106,11 +117,58 @@
             this.btnCurrentMonth.UseVisualStyleBackColor = true;
             this.btnCurrentMonth.Click += new System.EventHandler(this.btnCurrentMonth_Click);
             // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.AllowUserToOrderColumns = true;
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colName,
+            this.colInstrument,
+            this.colRole});
+            this.dataGridView2.Location = new System.Drawing.Point(586, 99);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(476, 387);
+            this.dataGridView2.TabIndex = 4;
+            // 
+            // btnBandMembers
+            // 
+            this.btnBandMembers.Location = new System.Drawing.Point(763, 35);
+            this.btnBandMembers.Name = "btnBandMembers";
+            this.btnBandMembers.Size = new System.Drawing.Size(157, 23);
+            this.btnBandMembers.TabIndex = 5;
+            this.btnBandMembers.Text = "Band Members";
+            this.btnBandMembers.UseVisualStyleBackColor = true;
+            this.btnBandMembers.Click += new System.EventHandler(this.btnBandMembers_Click);
+            // 
+            // colName
+            // 
+            this.colName.HeaderText = "Name";
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            // 
+            // colInstrument
+            // 
+            this.colInstrument.HeaderText = "Instrument";
+            this.colInstrument.Name = "colInstrument";
+            this.colInstrument.ReadOnly = true;
+            // 
+            // colRole
+            // 
+            this.colRole.HeaderText = "Role";
+            this.colRole.Name = "colRole";
+            this.colRole.ReadOnly = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1143, 498);
+            this.ClientSize = new System.Drawing.Size(1073, 498);
+            this.Controls.Add(this.btnBandMembers);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.btnCurrentMonth);
             this.Controls.Add(this.btnHardRock);
             this.Controls.Add(this.btnAllUpcomingEvents);
@@ -119,6 +177,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -133,6 +192,11 @@
         private System.Windows.Forms.Button btnAllUpcomingEvents;
         private System.Windows.Forms.Button btnHardRock;
         private System.Windows.Forms.Button btnCurrentMonth;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colInstrument;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRole;
+        private System.Windows.Forms.Button btnBandMembers;
     }
 }
 
