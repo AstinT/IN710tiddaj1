@@ -61,12 +61,16 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button1_Click(object sender, EventArgs e)
         {
-            var allPaintings = from painting in paintings
-                               select new { painting.Artist, painting.Title, painting.Method, painting.Year, painting.Width, painting.Height };
+            //Clear listbox
+            listBox1.Items.Clear();
 
-            foreach(var record in allPaintings)
+            //All paintings
+            var allPaintings = from painting in paintings
+                               select new { painting.Artist, painting.Year, painting.Method, painting.Title };
+
+            foreach(var p in allPaintings)
             {
-                listBox1.Items.Add(record);
+                listBox1.Items.Add(p.Artist + "\t\t" + p.Year + "\t\t" + p.Method + "\t\t" + p.Title);
             }
         }
 
@@ -76,7 +80,18 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button2_Click(object sender, EventArgs e)
         {
+            //Clear listbox
+            listBox1.Items.Clear();
 
+            //Artists from italy
+            var italianArtists= from artist in artists
+                                where artist.Country.Equals("Italy")
+                                select new { artist.FirstName, artist.LastName, artist.YearOfBirth, artist.YearOfDeath, artist.Country};
+
+            foreach (var a in italianArtists)
+            {
+                listBox1.Items.Add(a.FirstName + " " + a.LastName + "\t\t" + a.YearOfBirth + "-" + a.YearOfDeath + "\t\t" + a.Country);
+            }
         }
 
         //------------------------------------------------------
@@ -84,7 +99,19 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void btnBefore1800_Click(object sender, EventArgs e)
         {
-            
+            //Clear listbox
+            listBox1.Items.Clear();
+
+            //Paintings before 1800
+            var paintings1800 = from painting in paintings
+                                where painting.Year < 1800
+                                orderby painting.Year
+                                select new { painting.Artist, painting.Year, painting.Method, painting.Title };
+
+            foreach (var p in paintings1800)
+            {
+                listBox1.Items.Add(p.Artist + "\t\t" + p.Year + "\t\t" + p.Method + "\t\t" + p.Title);
+            }
         }
 
         //------------------------------------------------------
@@ -92,7 +119,18 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void btnOldest_Click(object sender, EventArgs e)
         {
-            
+            //Clear listbox
+            listBox1.Items.Clear();
+
+            //Oldest painting in paintings array
+            var oldestPainting = from painting in paintings
+                                 where painting.Year == paintings.Min(y => y.Year)
+                                 select new { painting.Artist, painting.Year, painting.Method, painting.Title };
+
+            foreach (var p in oldestPainting)
+            {
+                listBox1.Items.Add(p.Artist + "\t\t" + p.Year + "\t\t" + p.Method + "\t\t" + p.Title);
+            }            
         }
 
         //------------------------------------------------------
@@ -100,7 +138,20 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button6_Click(object sender, EventArgs e)
         {
-           
+            //Clear listbox
+            listBox1.Items.Clear();
+
+            string search = textBox1.Text;
+
+            //Search artist
+            var searchPainting = from painting in paintings
+                                 where painting.Artist.Equals(search)
+                                 select new { painting.Artist, painting.Year, painting.Method, painting.Title };
+
+            foreach (var p in searchPainting)
+            {
+                listBox1.Items.Add(p.Artist + "\t\t" + p.Year + "\t\t" + p.Method + "\t\t" + p.Title);
+            }            
         }
 
         //------------------------------------------------------
@@ -108,7 +159,8 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void btnNbyCountry_Click(object sender, EventArgs e)
         {
-            
+            //Clear listbox
+            listBox1.Items.Clear();
         }
 
         //------------------------------------------------------
@@ -116,7 +168,23 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button8_Click(object sender, EventArgs e)
         {
-                      
+            //Clear listbox
+            listBox1.Items.Clear();
+
+            //Artists grouped by country
+            var groupedCountry = from artist in artists
+                                 orderby artist.Country
+                                 group artist by artist.Country;
+
+            foreach (var group in groupedCountry)
+            {
+                listBox1.Items.Add(group.Key + ":");
+
+                foreach (Artist a in group)
+                {
+                    listBox1.Items.Add("\t\t" + a.FirstName + " " + a.LastName);
+                }                
+            }
         }
 
         //------------------------------------------------------
@@ -124,7 +192,20 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button7_Click(object sender, EventArgs e)
         {
-          
+            //Clear listbox
+            listBox1.Items.Clear();
+
+            //Dutch painters
+            var dutchArtists = from painting in paintings
+                               join artist in artists
+                               on painting.Artist equals artist.LastName
+                               where artist.Country.Equals("Netherlands")
+                               select new { painting.Artist, painting.Year, painting.Method, painting.Title };
+
+            foreach (var a in dutchArtists)
+            {
+                listBox1.Items.Add(a.Artist + "\t\t" + a.Year + "\t\t" + a.Method + "\t\t" + a.Title);
+            }
         }
 
         //------------------------------------------------------
@@ -132,7 +213,19 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button4_Click(object sender, EventArgs e)
         {
-          
+            //Clear listbox
+            listBox1.Items.Clear();
+
+            //All paintings with Arist and country
+            var allArtists = from painting in paintings
+                             join artist in artists
+                             on painting.Artist equals artist.LastName
+                             select new { artist.FirstName, artist.LastName, artist.Country, painting.Title };
+
+            foreach (var a in allArtists)
+            {
+                listBox1.Items.Add(a.FirstName + " " + a.LastName + "\t\t" + a.Country + "\t\t" + a.Title);
+            }
         }
 
         //------------------------------------------------------
@@ -140,7 +233,20 @@ namespace Art_Database_1
         //------------------------------------------------------
         private void button9_Click(object sender, EventArgs e)
         {
-          
+            //Clear listbox
+            listBox1.Items.Clear();
+
+            //French or Italian
+            var frenchItalianArtists = from painting in paintings
+                                       join artist in artists
+                                       on painting.Artist equals artist.LastName
+                                       where artist.Country.Equals("France") || artist.Country.Equals("Italy")
+                                       select new { painting.Artist, artist.Country, painting.Title };
+
+            foreach (var a in frenchItalianArtists)
+            {
+                listBox1.Items.Add(a.Artist + "\t\t" + a.Country + "\t\t" + a.Title);
+            }
         } 
     }
 }
