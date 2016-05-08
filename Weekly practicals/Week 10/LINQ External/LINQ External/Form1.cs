@@ -17,9 +17,21 @@ namespace LINQ_External
             InitializeComponent();
         }        
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnPictures_Click(object sender, EventArgs e)
         {
+            listBox1.Items.Clear();
+
             StrikesDbDataContext db = new StrikesDbDataContext();
+
+            var allPics = from p in db.tblPictures
+                          join s in db.tblStrikes
+                          on p.strikeID equals s.strikeID
+                          select new { s.strikeLatitude, s.strikeLongitude, p.pictureFileName };
+
+            foreach (var record in allPics)
+            {
+                listBox1.Items.Add(record.strikeLatitude + "\t\t" + record.strikeLongitude + "\t\t" + record.pictureFileName);
+            }
         }
     }
 }
