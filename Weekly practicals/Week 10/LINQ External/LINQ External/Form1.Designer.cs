@@ -49,7 +49,7 @@
             this.btnAveStrike.Name = "btnAveStrike";
             this.btnAveStrike.Size = new System.Drawing.Size(156, 24);
             this.btnAveStrike.TabIndex = 1;
-            this.btnAveStrike.Text = "Average Intensity";
+            this.btnAveStrike.Text = "Average Strike Intensity";
             this.btnAveStrike.UseVisualStyleBackColor = true;
             this.btnAveStrike.Click += new System.EventHandler(this.btnAveStrike_Click);
             // 
@@ -59,7 +59,7 @@
             this.btnLargeThreeFires.Name = "btnLargeThreeFires";
             this.btnLargeThreeFires.Size = new System.Drawing.Size(156, 24);
             this.btnLargeThreeFires.TabIndex = 2;
-            this.btnLargeThreeFires.Text = "Largest Three Fires";
+            this.btnLargeThreeFires.Text = "Three Largest Fires";
             this.btnLargeThreeFires.UseVisualStyleBackColor = true;
             this.btnLargeThreeFires.Click += new System.EventHandler(this.btnLargeThreeFires_Click);
             // 
@@ -69,7 +69,7 @@
             this.btnPictures.Name = "btnPictures";
             this.btnPictures.Size = new System.Drawing.Size(156, 24);
             this.btnPictures.TabIndex = 3;
-            this.btnPictures.Text = "All pictures";
+            this.btnPictures.Text = "All Pictures";
             this.btnPictures.UseVisualStyleBackColor = true;
             this.btnPictures.Click += new System.EventHandler(this.btnPictures_Click);
             // 
@@ -95,6 +95,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
