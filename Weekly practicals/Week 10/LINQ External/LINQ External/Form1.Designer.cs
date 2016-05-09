@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAveStrike = new System.Windows.Forms.Button();
+            this.btnLargeThreeFires = new System.Windows.Forms.Button();
             this.btnPictures = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnFireStrikes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -43,23 +43,25 @@
             this.listBox1.Size = new System.Drawing.Size(642, 316);
             this.listBox1.TabIndex = 0;
             // 
-            // button1
+            // btnAveStrike
             // 
-            this.button1.Location = new System.Drawing.Point(13, 13);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(156, 24);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAveStrike.Location = new System.Drawing.Point(13, 13);
+            this.btnAveStrike.Name = "btnAveStrike";
+            this.btnAveStrike.Size = new System.Drawing.Size(156, 24);
+            this.btnAveStrike.TabIndex = 1;
+            this.btnAveStrike.Text = "Average Intensity";
+            this.btnAveStrike.UseVisualStyleBackColor = true;
+            this.btnAveStrike.Click += new System.EventHandler(this.btnAveStrike_Click);
             // 
-            // button2
+            // btnLargeThreeFires
             // 
-            this.button2.Location = new System.Drawing.Point(175, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 24);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnLargeThreeFires.Location = new System.Drawing.Point(175, 13);
+            this.btnLargeThreeFires.Name = "btnLargeThreeFires";
+            this.btnLargeThreeFires.Size = new System.Drawing.Size(156, 24);
+            this.btnLargeThreeFires.TabIndex = 2;
+            this.btnLargeThreeFires.Text = "Largest Three Fires";
+            this.btnLargeThreeFires.UseVisualStyleBackColor = true;
+            this.btnLargeThreeFires.Click += new System.EventHandler(this.btnLargeThreeFires_Click);
             // 
             // btnPictures
             // 
@@ -71,24 +73,25 @@
             this.btnPictures.UseVisualStyleBackColor = true;
             this.btnPictures.Click += new System.EventHandler(this.btnPictures_Click);
             // 
-            // button4
+            // btnFireStrikes
             // 
-            this.button4.Location = new System.Drawing.Point(499, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(156, 24);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnFireStrikes.Location = new System.Drawing.Point(499, 12);
+            this.btnFireStrikes.Name = "btnFireStrikes";
+            this.btnFireStrikes.Size = new System.Drawing.Size(156, 24);
+            this.btnFireStrikes.TabIndex = 4;
+            this.btnFireStrikes.Text = "List Fires/Lightning Strikes";
+            this.btnFireStrikes.UseVisualStyleBackColor = true;
+            this.btnFireStrikes.Click += new System.EventHandler(this.btnFireStrikes_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 372);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnFireStrikes);
             this.Controls.Add(this.btnPictures);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLargeThreeFires);
+            this.Controls.Add(this.btnAveStrike);
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -99,10 +102,10 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAveStrike;
+        private System.Windows.Forms.Button btnLargeThreeFires;
         private System.Windows.Forms.Button btnPictures;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnFireStrikes;
     }
 }
 
