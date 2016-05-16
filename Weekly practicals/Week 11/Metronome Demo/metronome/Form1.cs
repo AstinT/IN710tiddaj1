@@ -8,8 +8,6 @@ using System.Text;
 using System.Windows.Forms;
 using System.Threading;
 
-
-
 namespace metronome
 {
     public partial class Form1 : Form
@@ -18,7 +16,9 @@ namespace metronome
         private Beeper mainBeeper;
         private Counter mainCounter;
         private TimeDisplay mainTimeDisplay;
-
+        
+        //Main Thread
+        private Thread mainThread;
 
         public Form1()
         {
@@ -35,9 +35,12 @@ namespace metronome
 
         private void button1_Click(object sender, EventArgs e)
         {
-           int currInterval = Convert.ToInt16(textBox1.Text);
-           mainMetronome.Interval = currInterval;
-           mainMetronome.start();
+            int currInterval = Convert.ToInt16(textBox1.Text);
+            mainMetronome.Interval = currInterval;
+
+            //New thread and start
+            mainThread = new Thread(mainMetronome.start);
+            mainThread.Start();
         }
 
         public void clearBuffer()
@@ -48,7 +51,7 @@ namespace metronome
         private void button2_Click(object sender, EventArgs e)
         {
             // Code needed here to stop the metronome
+            mainThread.Abort();
         }
-
     }
 }

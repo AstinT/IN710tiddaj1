@@ -54,16 +54,40 @@ namespace metronome
     public class Counter : MetronomeObserver
     {
         private NumericUpDown spinBox;
+        private int count;
 
         public Counter(Metronome metronome, NumericUpDown spinBox)
             : base(metronome)
         {
             this.spinBox = spinBox;
+            count = 0;
+        }
+
+        delegate void delegateSetSpinnerValue(int count);
+
+        //Set spinBox vaule to count
+        private void SetSpinnerValue(int count)
+        {
+            spinBox.Value = count;
         }
 
         public override void onMetronomeEvent(object sender, metronomeEventArgs e)
         {
-                spinBox.Value++;  
+            //Increment count
+            count++;
+
+            //Check if spinBox is invoked
+            if(spinBox.InvokeRequired)
+            {
+                delegateSetSpinnerValue setSpinner = SetSpinnerValue;
+                //Invokes spin box with delegate and count
+                spinBox.Invoke(setSpinner, count);
+            }
+            else
+            {
+                //Calls SetSpinnerValue method
+                SetSpinnerValue(count);
+            }
         }
     } // end TCounter
 
@@ -79,17 +103,31 @@ namespace metronome
             this.listBox = listBox;
         }
 
+        delegate void delegateSetListBoxText(DateTime currDateTime);
+
+        //Adds current date and time to listBox
+        private void SetListBoxText(DateTime currDateTime)
+        {
+            listBox.Items.Add(currDateTime.ToString());
+        }
+
         public override void onMetronomeEvent(object sender, metronomeEventArgs e)
         {
+            //Grab current DateTime from metronomeEventArgs
             DateTime currDateTime = e.currentTime;
-            listBox.Items.Add(currDateTime.ToString());         
+
+            //Checks if listBox is invoked
+            if(listBox.InvokeRequired)
+            {                
+                delegateSetListBoxText setListBox = SetListBoxText;
+                //Invokes Listbox with delegate and currDateTime
+                listBox.Invoke(setListBox, currDateTime);
+            }
+            else
+            {
+                //Calls SetListBoxText method
+                SetListBoxText(currDateTime);
+            }         
         }
-    }
-
-
-
-
-
-
-            
+    }            
 }

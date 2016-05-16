@@ -16,7 +16,6 @@ namespace metronome
         }
     }
 
-
     public class Metronome
     {
         private Form1 mainForm;
