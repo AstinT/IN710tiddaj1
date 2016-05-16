@@ -9,22 +9,29 @@ namespace Animal_Noises
 {
     public class Animal
     {
+        //Fields
         private SoundPlayer soundPlayer;
-        private String soundFileName;
-
-        public Animal(String soundFileName)
+        private String locker;
+        
+        //Constructor
+        public Animal(String locker, String soundFileName)
         {
             soundPlayer = new SoundPlayer(soundFileName);
+            this.locker = locker;
         }
 
+        //Method
         public void speak()
         {
             while (true)
             {
+                //Lock on variable locker
+                lock(locker)
+                {
                     soundPlayer.Play();
                     Thread.Sleep(500);
-            }
+                }                    
+            }                 
         }
-
     }
 }
