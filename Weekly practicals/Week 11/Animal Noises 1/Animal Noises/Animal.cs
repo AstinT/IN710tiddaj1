@@ -24,6 +24,5 @@ namespace Animal_Noises
                 Thread.Sleep(1000);
             }
         }
-
     }
 }
