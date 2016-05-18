@@ -1,0 +1,20 @@
+﻿@model FirstAspNet.Models.Holiday
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h3>It is @Model.daysToHoliday days until @Model.holidayName.</h3>
+        <img src="@Model.imageUrl" />
+    </div>
+</body>
+</html>
