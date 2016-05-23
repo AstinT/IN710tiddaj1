@@ -1,0 +1,94 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Find Dog</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome to the IN710 Dog Selector</h1>
+        <h1>We'll help you choose the perfect dog</h1>
+
+        <form action="FindDog" method="post">
+            <fieldset>
+                <legend>Preferences</legend>
+                <p>
+                    Must be good with children:<br />
+                    <input type="radio" name="goodWithChildren" value="true" checked> Yes<br />
+                    <input type="radio" name="goodWithChildren" value="false"> No<br />
+                </p>
+
+                <p>
+                    Drooling:<br />
+                    <input type="radio" name="drooling" value="true" checked> Yes<br />
+                    <input type="radio" name="drooling" value="false"> No<br />
+                </p>
+
+                <p>
+                    Coat Length:<br />
+                    <input type="radio" name="coatLength" value="Short" checked> Short<br />
+                    <input type="radio" name="coatLength" value="Medium"> Medium<br />
+                    <input type="radio" name="coatLength" value="Long"> Long<br />
+                </p>
+
+                <table>
+                    <tr>
+                        <td></td>
+                        <td>Low</td>
+                        <td>Medium</td>
+                        <td>High</td>
+                        <td>No Preference</td>
+                    </tr>
+                    <tr>
+                        <th>Actvity Level</th>
+                        <td><input type="radio" name="activityLevel" value="Low" checked></td>
+                        <td><input type="radio" name="activityLevel" value="Medium"></td>
+                        <td><input type="radio" name="activityLevel" value="High"></td>
+                        <td><input type="radio" name="activityLevel" value="None"></td>
+                    </tr>
+                    <tr>
+                        <th>Shedding Level</th>
+                        <td><input type="radio" name="sheddingLevel" value="Low" checked></td>
+                        <td><input type="radio" name="sheddingLevel" value="Medium"></td>
+                        <td><input type="radio" name="sheddingLevel" value="High"></td>
+                        <td><input type="radio" name="sheddingLevel" value="None"></td>
+                    </tr>
+                    <tr>
+                        <th>Grooming Level</th>
+                        <td><input type="radio" name="groomingLevel" value="Low" checked></td>
+                        <td><input type="radio" name="groomingLevel" value="Medium"></td>
+                        <td><input type="radio" name="groomingLevel" value="High"></td>
+                        <td><input type="radio" name="groomingLevel" value="None"></td>
+                    </tr>
+                    <tr>
+                        <th>Intelligence Level</th>
+                        <td><input type="radio" name="intelligenceLevel" value="Low" checked></td>
+                        <td><input type="radio" name="intelligenceLevel" value="Medium"></td>
+                        <td><input type="radio" name="intelligenceLevel" value="High"></td>
+                        <td><input type="radio" name="intelligenceLevel" value="None"></td>
+                    </tr>
+                </table>
+
+                <p>
+                    Size: <br />
+                    <select name="dogSize">
+                        <option value="Miniature">Miniature</option>
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Large">Large</option>
+                        <option value="Giant">Giant</option>
+                    </select>
+                </p>
+
+                <input type="submit" value="Find my dog" />
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
